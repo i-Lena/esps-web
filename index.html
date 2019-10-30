@@ -33,75 +33,49 @@
             <li data-target="#carousel-example-generic" data-slide-to="3"></li>
         </ol>
 
-        <!-- Wrapper for slides -->
-        <!--<div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="assets/pages/index/images/banner1.png" alt="...">
-                <div class="carousel-caption"></div>
-            </div>
-            <div class="item">
-                <img src="assets/pages/index/images/banner2.png" alt="...">
-                <div class="carousel-caption"></div>
-            </div>
-            <div class="item">
-                <img src="assets/pages/index/images/banner3.png" alt="...">
-                <div class="carousel-caption"></div>
-            </div>
-            <div class="item">
-                <img src="assets/pages/index/images/banner1.png" alt="...">
-                <div class="carousel-caption"></div>
-            </div>
-        </div>-->
-
         <!-- 轮播项 -->
         <div class="carousel-inner" role="listbox">
             <div class="item active" data-image-lg="pages/index/images/slide_01_2000x410.jpg" data-image-xs="pages/index/images/slide_01_640x340.jpg">
-<!--                <img src="pages/index/images/slide_01_2000x410.jpg" alt="">-->
             </div>
             <div class="item" data-image-lg="pages/index/images/slide_02_2000x410.jpg" data-image-xs="pages/index/images/slide_02_640x340.jpg">
-<!--                <img src="pages/index/images/slide_02_2000x410.jpg" alt="">-->
             </div>
             <div class="item" data-image-lg="pages/index/images/slide_03_2000x410.jpg" data-image-xs="pages/index/images/slide_03_640x340.jpg">
-<!--                <img src="pages/index/images/slide_03_2000x410.jpg" alt="">-->
             </div>
             <div class="item" data-image-lg="pages/index/images/slide_04_2000x410.jpg" data-image-xs="pages/index/images/slide_04_640x340.jpg">
-<!--                <img src="pages/index/images/slide_04_2000x410.jpg" alt="">-->
             </div>
         </div>
 
 
     </div>
-
     <!--section1-->
     <section>
-        <div class="container">
-            <div class="service row">
-                <div class="col-md-3 col-sm-6 col-xs-6 serviceItem serviceWrap">
-                    <div class="serviceIntru">
-                        <h2>专业服务 值得信赖</h2>
-                        <p>一站式、全方位</p>
-                        <p>解决自动化难题</p>
-                    </div>
+        <div class="container mainSerive">
+            <div class="mainSerItem">
+                <div class="mainSerIntru">
+                    <h2>专业服务 值得信赖</h2>
+                    <p>一站式、全方位</p>
+                    <p>解决自动化难题</p>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-6 serviceItem">
-                    <img src="pages/index/images/xuqiu.png" width="100%" alt="">
+            </div>
+            <div class="mainSerItem">
+                <img src="pages/index/images/xuqiu.png" alt="" />
+            </div>
+            <div class="mainSerItem">
+                <div class="mainSerIntru">
+                    <h2>项目多 有保障</h2>
+                    <p>扫码下载小草工程师APP</p>
+                    <p>接单赚钱 新生活</p>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-6 serviceItem serviceWrap">
-                    <div class="serviceIntru">
-                        <h2>项目多 有保障</h2>
-                        <p>扫码下载小草工程师APP</p>
-                        <p>接单赚钱 新生活</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6 serviceItem">
-                    <img src="pages/index/images/jiedan.png" width="100%" alt="">
-                </div>
+            </div>
+            <div class="mainSerItem">
+                <img src="pages/index/images/jiedan.png" alt="" />
             </div>
         </div>
     </section>
+
     <!--section2-->
     <section>
-        <div id="map" style="width: 100%;height: 500px;"></div>
+        <div id="map" class="map" style="width: 100%;height: 500px;"></div>
     </section>
 
     <script src="assets/libs/jquery/jquery.js"></script>
@@ -110,7 +84,6 @@
     <script>
         $(document).ready(function () {
             moduleLoad("/esps-web/assets/common/publicModule.html");
-            map();
         });
     </script>
     <!--模块化加载公共部分-->
@@ -126,171 +99,6 @@
                 });
             })
         }
-    </script>
-    <!--绘制中国地图-->
-    <script type="text/javascript">
-        function map() {
-            // 1.初始化echarts实例map
-            var map = echarts.init(document.getElementById("map"));
-            // 2.map的配置，配置option,新建一个地理坐标系 geo,地图类型为中国地图
-            /*var option = {
-                geo: {
-                    map: 'china'
-                }
-            };
-            // 3.调用setOption(option)为图标设置配置项
-            map.setOption(option);*/
-            //引入data数据
-            var data = [
-                {name: '海门', value: 9},
-                {name: '鄂尔多斯', value: 12},
-                {name: '招远', value: 12},
-                {name: '舟山', value: 12},
-                {name: '齐齐哈尔', value: 14},
-                {name: '盐城', value: 15},
-                {name: '赤峰', value: 16},
-                {name: '青岛', value: 18},
-                {name: '乳山', value: 18},
-            ];
-            /* 引用json格式的地图数据，通过异步加载的方式，加载宛城后需要手动注册地图 */
-            $.get("assets/libs/echartsMap/map/json/china.json",function (chinaJson) {
-                echarts.registerMap('china',chinaJson);  //注册地图
-                // 引入城市坐标
-                var geoCoordMap = {
-                    '海门':[121.15,31.89],
-                    '鄂尔多斯':[109.781327,39.608266],
-                    '招远':[120.38,37.35],
-                    '舟山':[122.207216,29.985295],
-                    '齐齐哈尔':[123.97,47.33],
-                    '盐城':[120.13,33.38],
-                    '赤峰':[118.87,42.28],
-                    '青岛':[120.33,36.07],
-                    '乳山':[121.52,36.89],
-                };
-                // 将数据和城市坐标对应上
-                var convertData= function (data) {
-                    var res = [];
-                    for(var i = 0; i < data.length; i++) {
-                        var geoCoord = geoCoordMap[data[i].name];
-                        if(geoCoord) {
-                            res.push({
-                                name: data[i].name,
-                                value: geoCoord.concat(data[i].value)
-                            });
-                        }
-                    }
-                    return res;
-                };
-                // 2.map的配置，配置option,新建一个地理坐标系geo,地图类型为中国地图
-                var option = {
-                    title: {
-                        text: '平台工程师资源分布及技能覆盖',
-                        left: 'center',
-                        textStyle: {
-                            color: '#000'
-                        }
-                    },
-                    //提示框组件
-                    tooltip: {
-                        trigger: 'item'
-                    },
-                    // 图例组件
-                    legend: {
-                        orient: 'vertical',
-                        y: 'bottom',
-                        x: 'right',
-                        data: ['平台工程师资源分布及技能覆盖'],
-                        textStyle: {
-                            color: '#000'
-                        }
-                    },
-                    /*visualMap: {
-                        min: 0,
-                        max: 300,
-                        calculable: true,
-                        inRange: {
-                            color: ['#ABCDEF','#99CC99']
-                        },
-                        textStyle: {
-                            color: '#fff'
-                        }
-                    },*/
-                    geo: {
-                        map: 'china',
-                        label: {
-                            emphasis: {
-                                show: true,
-                                areaColor: '#2a333d'
-                            }
-                        },
-                        // roam: false,
-                        roam: true,  //是否允许缩放
-                        // zoom: 2.5,   //初始缩放比
-                        // 定义样式
-                        /*itemStyle: {
-                            // 普通状态下的样式
-                            normal: {
-                                areaColor: '#ABCDEF99',
-                                borderColor: '#fff'
-                            },
-                            // 高亮状态下的样式,默认黄色
-                            emphasis: {
-                                // areaColor: '#2a333d'
-                            }
-                        },*/
-                        /*left: '0%',
-                        right: '0%',
-                        center: [117.98561551896913, 31.205000490896193],
-                        zoom: 2.5,// 改变这个值的大小就可以了*/
-
-                    },
-                    series: [
-                        {
-                            name: '全国工程师资源分布',   //series名称
-                            type: 'effectScatter', //series图标类型
-                            coordinateSystem: 'geo',  //series坐标系类型
-                            data: convertData(data.sort(function (a, b) {
-                                return b.value - a.value;
-                            }).slice(0, 5)),   //series数据内容
-                            showEffectOn: 'render',
-                            rippleEffect: {
-                                brushType: 'stroke'
-                            },
-                            hoverAnimation: true,
-                            // 控制显示文本
-                            label: {
-                                normal: {
-                                    formatter: '{b}',
-                                    position: 'right',
-                                    show: true
-                                },
-                                emphasis: {
-                                    show: true
-                                }
-                            },
-                            // series样式
-                            itemStyle: {
-                                normal: {
-                                    color: '#24a9b6',
-                                    shadowBlur: 10,
-                                    shadowColor: '#333'
-                                }
-                            },
-                            //根据数值大小改变点的大小
-                            symbolSize: function (val) {  //根据数值大小控制点的大小
-                                return val[2] / 1;
-                            },
-                            zlevel: 1
-                        }
-                    ],
-
-                };
-                map.setOption(option);
-            });
-        }
-
-
-
     </script>
     <!--index页面的js-->
     <script type="text/javascript" src="pages/index/js/main.js"></script>
