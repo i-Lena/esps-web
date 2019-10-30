@@ -1,0 +1,83 @@
+/* 全局样式 */
+html {
+    font-family: "Microsoft YaHei";
+    font-weight: 500;
+    font-size: 50px;
+}
+.container {
+    padding: 0;
+}
+/* nav */
+.navbar-esps {
+    background-color: #03030D;
+    margin-bottom: 0;
+    width: 100%;
+    top: 0;
+    border: none;
+}
+.navbar-esps .navbar-nav > li {
+    margin-left: 0.1rem;
+}
+.navbar-esps .navbar-nav > li > a {
+    display: inline-block;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    color: #fff;
+    padding: 0 0.3rem;
+}
+.navbar-esps .navbar-nav > li:hover > a {
+    color: #24a9b6;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #24a9b6;
+    background-color: transparent;
+}
+.navbar-right {
+    position: absolute;
+    top: 0;
+    right: 0.4rem;
+}
+/* 手机端 */
+.navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;;
+}
+.navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-toggle:focus {
+    outline: 0;
+}
+.navbar-esps .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+    margin-bottom: 23px;
+    margin-right: 30px;
+}
+
+/* 响应式 导航*/
+@media (max-width: 768px) {
+    .navbar-header {
+        height: 1rem;
+    }
+    .navbar-brand {
+        height: 1rem;
+        padding: 0.15rem 0.3rem;
+        font-size: 0.36rem;
+        line-height: 0.4rem;
+    }
+    .navbar-brand img {
+        height: 100%;
+    }
+    .navbar-esps .navbar-toggle {
+        margin-top: 0.15rem;
+        margin-bottom: 0rem;
+    }
+    .navbar-esps .navbar-nav > li > a {
+        display: inline-block;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        color: #fff;
+        padding: 0 0.3rem;
+    }
+
+}

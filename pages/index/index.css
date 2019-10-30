@@ -1,0 +1,70 @@
+/* index */
+/* 轮播图 */
+.carousel {
+    margin-top: 1.6rem;
+}
+.carousel .carousel-inner > .item {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+/* 轮播图小点 */
+.carousel-indicators li {
+    width: 0.14rem;
+    height: 0.14rem;
+    border-radius: 100%;
+    margin: 0.056rem;
+    background-color: #fff;
+    border: none;
+    opacity: 0.5;
+
+}
+.carousel-indicators li.active {
+    width: 0.336rem;
+    height: 0.14rem;
+    border-radius: 0.14rem;
+    margin: 0.056rem;
+    background-color: #fff;
+    border: none;
+    opacity: 1;
+}
+
+
+
+/* section1*/
+.container {
+    padding: 0;
+}
+.service {
+    /*margin: 1rem 0;*/
+}
+.serviceItem {
+    padding: 0 0;
+    margin: 0.28rem 0;
+    height: 5.68rem;
+    background-color: #f6f6f6;
+}
+.serviceWrap {
+    padding: 0.84rem;
+}
+.serviceIntru {
+    height: 80%;
+    border-bottom: 2px solid #3c3c3c;
+}
+.serviceIntru h2 {
+    font-size: 0.4rem;
+    font-weight: bold;
+}
+
+/* ======================== 响应式 ===========================*/
+/* 响应式 轮播图*/
+@media (max-width: 768px) {
+    .carousel {
+        margin-top: 1rem;
+    }
+}
+@media (min-width: 768px) {
+    .carousel .carousel-inner > .item {
+        height: 8.2rem;  /* 2000 * 410px*/
+    }
+}
