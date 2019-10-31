@@ -75,7 +75,6 @@
     </section>
     <!--section3-->
     <section>
-
         <div class="information solution">
             <div class="container InfoWrap">
                 <div class="infoItem">
@@ -142,29 +141,55 @@
             </div>
         </div>
     </section>
-
+    <!--section7-->
+    <section>
+        <div class="container corperator">
+            <div class="corpItem">
+                <img src="pages/index/images/corpLogo/HollySys.png" alt="">
+            </div>
+            <div class="corpItem">
+                <img src="pages/index/images/corpLogo/Honeywell.png" alt="">
+            </div>
+            <div class="corpItem">
+                <img src="pages/index/images/corpLogo/supcon.png" alt="">
+            </div>
+            <div class="corpItem">
+                <img src="pages/index/images/corpLogo/emerson.png" alt="">
+            </div>
+            <div class="corpItem">
+                <img src="pages/index/images/corpLogo/siemens.png" alt="">
+            </div>
+            <div class="corpItem">
+                <img src="pages/index/images/corpLogo/schneider.png" alt="">
+            </div>
+            <div class="corpItem">
+                <img src="pages/index/images/corpLogo/yokogawa.png" alt="">
+            </div>
+            <div class="corpItem">
+                <img src="pages/index/images/corpLogo/geenergy.png" alt="">
+            </div>
+            <div class="corpItem">
+                <img src="pages/index/images/corpLogo/abb.png" alt="">
+            </div>
+            <div class="corpItem">
+                <img src="pages/index/images/corpLogo/inevnsys.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!--section8-->
+    <section>
+        <div class="container advantages">
+            <img src="pages/index/images/advantages.png" alt="">
+        </div>
+    </section>
+    <!--footer-->
+    <div class="footer">
+        <div slot="footer"></div>
+    </div>
     <script src="assets/libs/jquery/jquery.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.js"></script>
-    <!--加载各个函数-->
-    <script>
-        $(document).ready(function () {
-            moduleLoad("/esps-web/assets/common/publicModule.html");
-        });
-    </script>
     <!--模块化加载公共部分-->
-    <script>
-        function moduleLoad(url) {
-            $.get(url,function (result) {
-                var html = $(result);
-                var _templates = html;
-                $("[slot]").each(function () {
-                    var id = $(this).attr('slot');
-                    var body = $(_templates).find("#"+id).html();
-                    $(this).html(body);
-                });
-            })
-        }
-    </script>
+    <script type="text/javascript" src="assets/common/assets/js/common.js"></script>
     <!--index页面的js-->
     <script type="text/javascript" src="pages/index/js/main.js"></script>
 </body>

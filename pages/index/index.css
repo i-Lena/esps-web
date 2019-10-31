@@ -98,6 +98,35 @@
 .kshTool,.engineer {
     background-color: #f7f7f7;
 }
+/* section7 corperator*/
+.corperator {
+    margin: 1rem auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.corpItem {
+    width: 20%;
+    height: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    margin-top: 0.3rem;
+}
+.corpItem img {
+    /*width: 100%;*/
+    height: 100%;
+}
+/* section8 */
+.advantages {
+    margin: 0.5rem auto;
+    height: 2.73rem;
+}
+.advantages img{
+    width: 100%;
+    height: 100%;
+}
 
 /* ======================== 响应式 ===========================*/
 /* 响应式 轮播图*/
@@ -146,6 +175,26 @@
     }
     .infoItem div {
         width: 83%;
+    }
+    /* section7 */
+    .corperator {
+        margin-top: 0.2rem;
+        /*margin-bottom: 0.4rem;*/
+        padding-left: 0.1rem;
+    }
+    .corpItem {
+        height: 1rem;
+        margin-top: 0.2rem;
+    }
+    .corpItem img{
+        width: 95%;
+        height: 100%;
+    }
+    /* section8 */
+    .advantages {
+        margin: 0rem auto;
+        height: 1rem;
+        padding: 0 0.2rem;
     }
 
 }
