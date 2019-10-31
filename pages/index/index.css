@@ -56,16 +56,53 @@
 }
 .mainSerItem img {
     width: 100%;
+    height: 100%;
 }
 /* section2 map*/
 .map {
     margin-top: 0.4rem;
+    width: 100%;
+    height: 9rem;
+    background-color: #f7f7f7;
+    padding-top: 0.4rem;
+}
+/* section3,section4,section5,section6 */
+.information {
+    height: 9.96rem;  /* 9.96rem */
+}
+.InfoWrap {
+    display: flex;
+    height: 100%;
+}
+.infoItem {
+    width: 50%;
+    /* 实现水平垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 里面元素纵向排列 */
+    flex-direction: column;
+}
+.infoItem h2 {
+    font-size: 0.6rem;
+    color: #000;
+    margin-bottom: 0.6rem;
+}
+.infoItem p {
+    font-size: 0.32rem;
+}
+.solution,.partner {
+    background-color: #fff;
+}
+/* section4 kshTool */
+.kshTool,.engineer {
+    background-color: #f7f7f7;
 }
 
 /* ======================== 响应式 ===========================*/
 /* 响应式 轮播图*/
 /* 手机 */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     /* 轮播图*/
     .carousel {
         margin-top: 1rem;
@@ -88,7 +125,29 @@
     /* section2*/
     .map {
         margin-top: 0.2rem;
+        padding-top: 0.2rem;
+        height: 5rem;
     }
+    /* section3,section4,section5,section6 */
+    .information {
+        height: 3.55rem;  /* 2.81rem */
+    }
+    .infoItem img {
+        width: 100%;
+        height: 100%;
+    }
+    .infoItem h2 {
+        font-size: 0.32rem;
+        color: #000;
+        margin-bottom: 0.5rem;
+    }
+    .infoItem p {
+        font-size: 0.28rem;
+    }
+    .infoItem div {
+        width: 83%;
+    }
+
 }
 /* pc*/
 @media (min-width: 768px) {

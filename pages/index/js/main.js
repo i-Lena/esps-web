@@ -51,21 +51,33 @@ $(function () {
             {name: '赤峰', value: 16},
             {name: '青岛', value: 18},
             {name: '乳山', value: 18},
+            {name: '新疆', value: 17},
+            {name: '四川', value: 16},
+            {name: '内蒙古', value: 15},
+            {name: '山西', value: 15},
+            {name: '北京', value: 15},
+            {name: '天津', value: 15},
+            {name: '辽宁', value: 15},
+            {name: '吉林', value: 15},
+            {name: '上海', value: 15},
+            {name: '浙江', value: 15},
         ];
         /* 引用json格式的地图数据，通过异步加载的方式，加载宛城后需要手动注册地图 */
         $.get("assets/libs/echartsMap/map/json/china.json",function (chinaJson) {
             echarts.registerMap('china',chinaJson);  //注册地图
             // 引入城市坐标
             var geoCoordMap = {
-                '海门':[121.15,31.89],
-                '鄂尔多斯':[109.781327,39.608266],
-                '招远':[120.38,37.35],
-                '舟山':[122.207216,29.985295],
-                '齐齐哈尔':[123.97,47.33],
-                '盐城':[120.13,33.38],
-                '赤峰':[118.87,42.28],
                 '青岛':[120.33,36.07],
-                '乳山':[121.52,36.89],
+                '新疆':[87.68,43.77],
+                '四川':[104.06,30.67],
+                '内蒙古':[111.65,40.82],
+                '山西':[112.53,37.87],
+                '北京':[116.46,39.92],
+                '天津':[117.2,39.13],
+                '辽宁':[123.38,41.8],
+                '吉林':[125.35,43.88],
+                '上海':[121.48,31.22],
+                '浙江':[120.19,30.26],
             };
             // 将数据和城市坐标对应上
             var convertData= function (data) {
@@ -151,7 +163,7 @@ $(function () {
                         coordinateSystem: 'geo',  //series坐标系类型
                         data: convertData(data.sort(function (a, b) {
                             return b.value - a.value;
-                        }).slice(0, 5)),   //series数据内容
+                        })/*.slice(0, 5)*/),   //series数据内容
                         showEffectOn: 'render',
                         rippleEffect: {
                             brushType: 'stroke'
