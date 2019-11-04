@@ -138,6 +138,15 @@ html {
     .comInfo {
         padding: 0.4rem 0;
     }
+    .hotline {
+        margin-bottom: 0.2rem;
+    }
+    .hotTitle {
+        font-size: 0.28rem;
+    }
+    .hotNum {
+        font-size: 0.32rem;
+    }
     .qrcodeWrap img {
         width: 50%;
         margin-top: 0.1rem;
