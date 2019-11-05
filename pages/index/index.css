@@ -1,4 +1,8 @@
 /* index */
+/* 导航条改颜色 */
+#indexNav {
+    color: #24a9b6;
+}
 /* 轮播图 */
 .carousel {
     margin-top: 1.6rem;

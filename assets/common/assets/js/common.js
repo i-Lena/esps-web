@@ -2,6 +2,7 @@
 $(document).ready(function () {
     moduleLoad("/esps-web/assets/common/publicModule.html");
 });
+/* 模块加载 */
 function moduleLoad(url) {
     $.get(url,function (result) {
         var html = $(result);
@@ -12,4 +13,4 @@ function moduleLoad(url) {
             $(this).html(body);
         });
     })
-}
+};
