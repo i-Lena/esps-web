@@ -5,3 +5,72 @@
 #partnerNav {
     color: #24a9b6;
 }
+/* banner */
+.inBanner {
+    margin-top: 1.6rem;
+    background: url("../images/inBanner_s_2000x410.png") no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+}
+.inBannerWrap {
+    height: 6.6rem;
+    padding-top: 1.5rem;
+}
+.inBTitle {
+    font-size: 0.7rem;
+}
+.inBSubTitle {
+    padding-top: 0.5rem;
+    font-size: 0.36rem;
+    color: #ccc;
+}
+.inBanBtn a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.2rem;
+    width: 3rem;
+    text-align: center;
+    background-color: #24a9b6;
+    font-size: 0.32rem;
+    letter-spacing: 0.05rem;
+    color: #fff;
+}
+.inBanBtn a:hover {
+    text-decoration: none;
+}
+
+
+
+/* ======================= 响应式适配 =========================*/
+/* 手机 */
+@media (max-width: 768px) {
+    /* 内页 banner*/
+    .inBanner {
+        margin-top: 1rem;
+        background: url("../images/inBanner_s_640x340.png") no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        color: #fff;
+    }
+    .inBannerWrap {
+        height: 3.5rem;
+        padding-left: 0.3rem;
+        padding-top: 0.8rem;
+    }
+    .inBTitle {
+        font-size: 0.36rem;
+    }
+    .inBSubTitle {
+        padding-top: 0.2rem;
+        font-size: 0.28rem;
+    }
+    .inBanBtn a{
+        margin-top: 0.3rem;
+        font-size: 0.28rem;
+        padding: 0.15rem;
+    }
+}
+/* ======================= /响应式适配=========================*/
