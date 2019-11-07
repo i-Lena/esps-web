@@ -1,4 +1,8 @@
 /* sevice */
+body {
+    background-color: #F7F8FC;
+    /*background-color: #ECF0F6;*/
+}
 /* 导航条改颜色 */
 #serviceNav {
     color: #24a9b6;
@@ -38,8 +42,126 @@
 .inBanBtn a:hover {
     text-decoration: none;
 }
+/* 自动化服务 */
+.autoService {
 
-
+}
+.serviceTitle {
+    padding: 1.5rem 0 1.2rem;
+}
+.serviceTitle h2,h3 {
+    text-align: center;
+}
+.serviceTitle h2 {
+    font-size: 0.72rem;
+}
+.serviceTitle h3 {
+    font-size: 0.4rem;
+    color: #f72;
+    font-weight: bold;
+}
+.serviceItem {
+    padding: 0.3rem 0.3rem;
+    /*margin: 0 0.3rem;*/
+}
+.itemCont {
+    border: 1px solid #fff;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    /*margin: 0 0.3rem;*/
+    /*height: 400px;*/
+}
+.serviceImg img {
+    width: 100%;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+}
+.serviceImg {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.serviceImg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    z-index: 9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: all 0.4s ease;
+}
+.serviceImg:hover::before {
+    opacity: 1;
+}
+.serItemCon {
+    padding: 0.5rem 0.5rem 1rem;
+}
+.serItemTitle {
+    text-align: center;
+    font-size: 0.48rem;
+    color: #182345;
+    font-weight: bold;
+    cursor: pointer;
+}
+.serItemText {
+    text-align: justify;
+    margin: 0.4rem 0 0.5rem;
+    color: #9FA2A6;
+    line-height: 1.8em;
+}
+.more {
+    width: 3rem;
+    padding: 0.2rem 0.3rem;
+    border: 1px solid #24a9b6;
+    color: #24a9b6;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.more:hover {
+    background-color: #24a9b6;
+    color: #fff;
+}
+/* section 3,4,5 */
+.advantages {
+    padding: 1rem 0;
+}
+.advTitle {
+    text-align: left;
+    font-size: 0.6rem;
+    color: #333;
+}
+.blue {
+    display: inline-block;
+    width: 0.1rem;
+    height: 0.6rem;
+    content: "";
+    background: #24a9b6;
+    position: relative;
+    left: 0;
+    top: 0.1rem;
+    margin-right: 0.1rem
+}
+.advImg {
+    text-align: center;
+}
+.advImg img {
+    max-width: 100%;
+}
+.advDesc {
+    text-align: center;
+    margin: 1rem 0 0rem;
+    font-size: 0.4rem;
+}
+.brand {
+    background-color: #f9fafc;
+}
 
 /* ======================= 响应式适配 =========================*/
 /* 手机 */
@@ -69,6 +191,34 @@
         margin-top: 0.3rem;
         font-size: 0.28rem;
         padding: 0.15rem;
+    }
+    /* 自动化服务 */
+    .serviceTitle {
+        padding: 0.3rem 0 0.2rem;
+    }
+    .itemCont {
+        margin: 0 0.3rem;
+    }
+    .serItemCon {
+        padding: 0.3rem 0.3rem 0.2rem;
+    }
+    .serItemText {
+        margin: 0.2rem 0 0.3rem;
+    }
+    /* 3,4,5*/
+    .advantages {
+        padding: 0 0.3rem;
+    }
+    .advTitle {
+        font-size: 0.4rem;
+    }
+    .blue {
+        height: 0.4rem;
+        top: 0.05rem;
+    }
+    .advDesc {
+        margin: 0.3rem 0 0.2rem;
+        font-size: 0.28rem;
     }
 }
 /* ======================= /响应式适配 =========================*/
