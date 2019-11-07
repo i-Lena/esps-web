@@ -101,6 +101,7 @@ body {
 }
 .serItemCon {
     padding: 0.5rem 0.5rem 1rem;
+    text-align: center;
 }
 .serItemTitle {
     text-align: center;
@@ -116,6 +117,7 @@ body {
     line-height: 1.8em;
 }
 .more {
+    display: inline-block;
     width: 3rem;
     padding: 0.2rem 0.3rem;
     border: 1px solid #24a9b6;
@@ -127,6 +129,7 @@ body {
 .more:hover {
     background-color: #24a9b6;
     color: #fff;
+    text-decoration: none;
 }
 /* section 3,4,5 */
 .advantages {
