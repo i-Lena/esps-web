@@ -1,5 +1,5 @@
-.service {
-    height: 800px;
+body {
+    background-color: #F7F8FC;
 }
 /* 导航条改颜色 */
 #solutionNav {
@@ -40,6 +40,99 @@
 .inBanBtn a:hover {
     text-decoration: none;
 }
+/* 解决方案 */
+.solution {
+    padding: 0 0 2rem 0;
+}
+/* 自动化服务 */
+.autoService {
+
+}
+.serviceTitle {
+    padding: 1.5rem 0 1.2rem;
+}
+.serviceTitle h2,h3 {
+    text-align: center;
+}
+.serviceTitle h2 {
+    font-size: 0.72rem;
+}
+.serviceTitle h3 {
+    font-size: 0.4rem;
+    color: #f72;
+    font-weight: bold;
+}
+.serviceItem {
+    padding: 0.3rem 0.3rem;
+    /*margin: 0 0.3rem;*/
+}
+.itemCont {
+    border: 1px solid #fff;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    /*margin: 0 0.3rem;*/
+    /*height: 400px;*/
+}
+.serviceImg img {
+    width: 100%;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+}
+.serviceImg {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.serviceImg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    z-index: 9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: all 0.4s ease;
+}
+.serviceImg:hover::before {
+    opacity: 1;
+}
+.serItemCon {
+    padding: 0.5rem 0.5rem 1rem;
+    text-align: center;
+}
+.serItemTitle {
+    text-align: center;
+    font-size: 0.48rem;
+    color: #182345;
+    font-weight: bold;
+    cursor: pointer;
+}
+.serItemText {
+    text-align: justify;
+    margin: 0.4rem 0 0.5rem;
+    color: #9FA2A6;
+    line-height: 1.8em;
+}
+.more {
+    display: inline-block;
+    width: 3rem;
+    padding: 0.2rem 0.3rem;
+    border: 1px solid #24a9b6;
+    color: #24a9b6;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.more:hover {
+    background-color: #24a9b6;
+    color: #fff;
+    text-decoration: none;
+}
 
 
 
@@ -71,6 +164,23 @@
         margin-top: 0.3rem;
         font-size: 0.28rem;
         padding: 0.15rem;
+    }
+    /* 解决方案 */
+    .solution {
+        padding: 0 0 0.5rem 0;
+    }
+    /* 自动化服务 */
+    .serviceTitle {
+        padding: 0.3rem 0 0.2rem;
+    }
+    .itemCont {
+        margin: 0 0.3rem;
+    }
+    .serItemCon {
+        padding: 0.3rem 0.3rem 0.2rem;
+    }
+    .serItemText {
+        margin: 0.2rem 0 0.3rem;
     }
 }
 /* ======================= /响应式适配=========================*/
