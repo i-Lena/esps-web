@@ -1,0 +1,158 @@
+/* 介绍*/
+.intro {
+    background-color: #fff;
+}
+/* 标题*/
+.titleWrap {
+    margin: 1rem auto 0.6rem;
+}
+.mainTitle {
+    font-size: 0.6rem;
+    text-align: center;
+    color: #002;
+}
+.subTitle {
+    font-size: 0.4rem;
+    color: #cacace;
+    text-align: center;
+}
+.orange {
+    color: #f80;
+}
+.introCont {
+    font-size: 0.32rem;
+    color: #000;
+    text-align: justify;
+    line-height: 2em;
+}
+.intruRemark {
+    margin-top: 0.8rem;
+}
+.intruRemarkItem {
+    text-align: center;
+}
+.intruRemarkItem p {
+    margin-top: 0.4rem;
+    font-size: 0.4rem;
+    color: #333;
+}
+/* 品牌 */
+.brandIntro {
+    background-color: #fff;
+}
+.brandWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+.brandItem {
+    width: 20%;
+    position: relative;
+}
+.brandItem::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.6);
+    opacity: 0;
+    z-index: 9;
+    transition: all 0.4s ease;
+}
+.brandItem img {
+    max-width: 100%;
+}
+.brandItem:hover:before {
+    opacity: 1;
+}
+/* 流程 */
+.process {
+    padding-bottom: 0.5rem;
+}
+.process img {
+    max-width: 100%;
+}
+/* 行业 */
+.industry {
+    background-color: #fff;
+}
+.industryList {
+    padding-top: 0.5rem;
+}
+.industryItem {
+    text-align: center;
+}
+.industryItem img {
+    max-width: 100%;
+}
+.industryImg:hover img {
+    transform: translateY(0.2rem);
+    transition: transform 0.2s linear 0s;
+}
+.industryItem p {
+    margin: 0.5rem auto;
+    font-size: 0.32rem;
+    color: #24a9b6;
+}
+/* 一键发布需求 */
+.btnWrap {
+    background-color: #fff;
+
+}
+.demandBtnWrap {
+    text-align: center;
+}
+.demandBtn {
+    display: inline-block;
+    width: 3rem;
+    padding: 0.2rem 0.3rem;
+    background-color: #24a9b6;
+    color: #fff;
+    text-align: center;
+    margin: 1rem auto;
+}
+.demandBtn:hover,.demandBtn:active,.demandBtn:link,.demandBtn:visited {
+    text-decoration: none;
+}
+/* ======================== 响应式适配 ==========================*/
+@media (max-width: 768px) {
+    .intro,.brandIntro,.industry {
+        padding: 0 0.3rem;
+    }
+    .mainTitle {
+        font-size: 0.36rem;
+    }
+    .subTitle {
+        font-size: 0.32rem;
+    }
+    .introCont {
+        font-size: 0.28rem;
+    }
+    .intruRemarkItem p {
+        font-size: 0.28rem;
+    }
+    .industryItem p {
+        font-size: 0.28rem;
+    }
+    .titleWrap {
+        margin: 0.5rem auto 0.2rem;
+    }
+    .intruRemark {
+        margin-top: 0.4rem;
+    }
+    .industryList {
+        padding-top: 0.2rem;
+    }
+    .industryItem img {
+        max-width: 80%;
+    }
+    .demandBtn {
+        margin: 0.5rem auto;
+    }
+}
+/* ======================== /响应式适配 ==========================*/
