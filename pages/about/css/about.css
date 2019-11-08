@@ -1,6 +1,3 @@
-.service {
-    height: 800px;
-}
 /* 导航条改颜色 */
 #aboutNav {
     color: #24a9b6;
@@ -41,7 +38,30 @@
     text-decoration: none;
 }
 
-
+.about {
+    margin: 1.5rem auto;
+}
+.introTitle {
+    font-size: 0.44rem;
+    color: #24a9b6;
+}
+.introCont {
+    font-size: 0.32rem;
+    color: #777;
+    margin-top: 0.3rem;
+}
+.introCont p {
+    line-height: 2em;
+    text-align: justify;
+}
+.contact {
+    margin-top: 0.8rem;
+}
+.text {
+    font-size: 0.36rem;
+    color: #000;
+    margin-left: 0.1rem;
+}
 
 /* ======================= 响应式适配 =========================*/
 /* 手机 */
@@ -71,6 +91,22 @@
         margin-top: 0.3rem;
         font-size: 0.28rem;
         padding: 0.15rem;
+    }
+    /* 主要内容 */
+    .about {
+        margin: 0.5rem 0.3rem;
+    }
+    .introTitle {
+        font-size: 0.36rem;
+    }
+    .introCont {
+        font-size: 0.28rem;
+    }
+    .text {
+        font-size: 0.32rem;
+    }
+    .contact {
+        margin-top: 0.4rem;
     }
 }
 /* ======================= /响应式适配=========================*/
