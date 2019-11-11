@@ -1,6 +1,4 @@
-.service {
-    height: 800px;
-}
+/*  工程师  */
 /* 导航条改颜色 */
 #engineerNav {
     color: #24a9b6;
@@ -19,15 +17,12 @@
     padding-top: 1.5rem;
 }
 .inBTitle {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 .inBSubTitle {
     padding-top: 0.5rem;
-    font-size: 0.6rem;
-    /*color: #ccc;*/
-}
-.bigFont {
-    font-size: 0.7rem;
+    font-size: 0.36rem;
+    color: #ccc;
 }
 .inBanBtn a {
     display: inline-block;
@@ -43,7 +38,155 @@
 .inBanBtn a:hover {
     text-decoration: none;
 }
-
+/* 模块*/
+.mode {
+    padding: 0.6rem 0;
+}
+.modTitle h3 {
+    font-size: 0.8rem;
+    color: #171313;
+    padding-bottom: 0.6rem;
+    /*border-bottom: 0.1rem solid #AAB8CB;*/
+    /*border-bottom-height: 0.1rem;*/
+    position: relative;
+}
+.modTitle h3::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #AAB8CB;
+    width: 0.9rem;
+    height: 0.1rem;
+}
+.modeText p {
+    font-size: 0.32rem;
+    color: #333;
+    text-align: justify;
+    line-height: 2em;
+}
+.profit {
+    padding: 0.5rem 0 1rem 0;
+}
+.profitItem {
+    height: 5.4rem;
+    padding: 0.6rem 0.3rem;
+    border: 1px solid #e9e9e9;
+    color: #969696;
+    font-size: 0.32rem;
+    text-align: center;
+}
+.profitItem img {
+    width: 45%;
+}
+.profitItem p {
+    text-align: justify;
+    margin-top: 0.5rem;
+}
+/* 下载 app */
+.app {
+    background-color: #f9fafc;
+}
+.appWrap {
+    /*background-color: #f9fafc;*/
+    background: url("../images/bg_engineer.png") #f9fafc no-repeat;
+    background-position: right;
+    /*background-size: cover;*/
+    height: 10rem;   /*  测试 */
+    display: flex;
+    align-items: center;
+}
+.appTitle {
+    font-size: 0.72rem;
+    color: #000;
+}
+.appText {
+    font-size: 0.36rem;
+    color: #666;
+}
+.appSubTitle {
+    font-size: 0.68rem;
+}
+.blue {
+    color: #00abbc;
+}
+.orange {
+    color: #f7ad27;
+}
+/* 如何使用*/
+.use {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.useWrap {
+    display: flex;
+}
+.useItem {
+    width: 25%;
+}
+.timeline {
+    text-align: center;
+    font-size: 1rem;
+    color: #e4e7ec;
+    padding: 0.5rem;
+    border-bottom: 2px solid #e4e7ec;
+    position: relative;
+}
+.timeline::after {
+    display: inline-block;
+    content: '';
+    width: 0.26rem;
+    height: 0.26rem;
+    background-color: #e4e7ec;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -0.13rem;
+    left: 48%;
+}
+.desp {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+.desp p {
+    color: #808c99;
+}
+/* 品牌 */
+.brand {
+    padding: 0.5rem 0;
+}
+.brandWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+.brandItem {
+    width: 20%;
+    position: relative;
+}
+.brandItem::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.6);
+    opacity: 0;
+    z-index: 9;
+    transition: all 0.4s ease;
+}
+.brandItem img {
+    max-width: 100%;
+}
+.brandItem:hover:before {
+    opacity: 1;
+}
 
 
 /* ======================= 响应式适配 =========================*/
@@ -64,19 +207,91 @@
         padding-top: 0.8rem;
     }
     .inBTitle {
-        font-size: 0.32rem;
+        font-size: 0.36rem;
     }
     .inBSubTitle {
         padding-top: 0.2rem;
-        font-size: 0.32rem;
-    }
-    .bigFont {
-        font-size: 0.36rem;
+        font-size: 0.28rem;
     }
     .inBanBtn a{
         margin-top: 0.3rem;
         font-size: 0.28rem;
         padding: 0.15rem;
+    }
+    /* 主要模块  --介绍 */
+    .mode {
+        padding: 0.3rem;
+    }
+    .modTitle h3 {
+        font-size: 0.36rem;
+        color: #171313;
+        padding-bottom: 0.3rem;
+    }
+    .modTitle h3::after {
+        top: 0.6rem;
+        width: 0.6rem;
+        height: 0.05rem;
+    }
+    .modeText p {
+        font-size: 0.28rem;
+        line-height: 1.8em;
+    }
+    /* 合作利益 */
+    .profitWrap {
+        padding: 0 0.3rem 0.3rem 0.3rem;
+    }
+    .profit {
+        padding: 0;
+    }
+    .profitItem {
+        height: 3.5rem;
+        margin: 0.3rem 0 0 0;
+        font-size: 0.24rem;
+    }
+    /* 如何使用 */
+    .use {
+        padding: 0.3rem;
+    }
+    .timeline {
+        font-size: 0.36rem;
+    }
+    .timeline::after {
+        width: 0.2rem;
+        height: 0.2rem;
+        bottom: -0.1rem;
+        left: 46%;
+    }
+    .desp img {
+        width: 60%;
+    }
+    .desp h4 {
+        font-size: 0.28rem;
+    }
+    .desp p {
+        font-size: 0.26rem;
+    }
+    /* app下载*/
+    .appWrap {
+        width: 100%;
+        height: 4.5rem;
+        -webkit-background-size: cover;
+        background-size: 50% 68%;
+        background-position: 100% center;
+    }
+    .appCont {
+        padding: 0 0.3rem;
+    }
+    .appTitle {
+        font-size: 0.36rem;
+    }
+    .appText {
+        font-size: 0.28rem;
+    }
+    .appTextS {
+        width: 70%;
+    }
+    .appSubTitle {
+        font-size: 0.32rem;
     }
 }
 /* ======================= /响应式适配=========================*/
