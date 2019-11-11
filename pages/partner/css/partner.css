@@ -270,6 +270,28 @@
     .desp p {
         font-size: 0.26rem;
     }
-
+    /* app下载*/
+    .appWrap {
+        width: 100%;
+        height: 4.5rem;
+        -webkit-background-size: cover;
+        background-size: 50% 68%;
+        background-position: 100% center;
+    }
+    .appCont {
+        padding: 0 0.3rem;
+    }
+    .appTitle {
+        font-size: 0.36rem;
+    }
+    .appText {
+        font-size: 0.28rem;
+    }
+    .appTextS {
+        width: 70%;
+    }
+    .appSubTitle {
+        font-size: 0.32rem;
+    }
 }
 /* ======================= /响应式适配=========================*/
