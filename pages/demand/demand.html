@@ -14,10 +14,6 @@
     <script src="/esps-web/assets/libs/html5shiv/html5shiv-printshiv.min.js"></script>
     <script src="/esps-web/assets/libs/respond/respond.min.js"></script>
     <![endif]-->
-    <!--echarts-->
-    <script src="/esps-web/assets/libs/echartsMap/echarts.js"></script>
-    <!--引入中国地图-->
-    <script src="/esps-web/assets/libs/echartsMap/map/js/china.js"></script>
 </head>
 <body>
 <!--导航条-->
@@ -40,8 +36,136 @@
         </div>
     </div>
 </section>
-<!--banner-->
-<section class="service">111</section>
+<!--未登录提示信息-->
+<section>
+    <div class="container tipWrap">
+        尚未登录，不允许填写需求信息！
+    </div>
+</section>
+<!--表单信息-->
+<section>
+    <div class="container formWrap">
+        <div class="row formItem">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label><span class="redStar">*</span>业务种类：</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select name="category" placehold="请选择业务种类">
+                            <option value="1">系统检维修</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+        <div class="row formItem">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label><span class="redStar">*</span>公司名称：</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" placeholder="请输入公司名称">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>联系人姓名：</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" placeholder="请输入联系人姓名">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row formItem">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>联系人职务：</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" placeholder="请输入公司名称">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label><span class="redStar">*</span>联系人电话：</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" placeholder="请输入联系人姓名">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row formItem">
+            <div class="col-md-6">
+                <label>公司地址：</label>
+            </div>
+        </div>
+        <div class="row formItem">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>省：</label>
+                    </div>
+                    <div class="col-md-10">
+                        <select name="" id="">
+                            <option value="1">山东</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>市：</label>
+                    </div>
+                    <div class="col-md-10">
+                        <select name="">
+                            <option value="1">青岛</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>区：</label>
+                    </div>
+                    <div class="col-md-10">
+                        <select name="">
+                            <option value="1">崂山</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row formItem">
+            <div class="col-md-6">
+                <label>需求详述：</label>
+            </div>
+        </div>
+        <div class="row formItem">
+            <div class="col-md-12">
+                <textarea name="" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="row formItem formFooter">
+            <div class="btnWrap">提交</div>
+            <div class="privateDeclare">
+                <span class="redStar">*隐私声明：</span>
+                您所填写的信息仅用于与您的沟通
+            </div>
+        </div>
+    </div>
+</section>
 <!--footer-->
 <div class="footer">
     <div slot="footer"></div>
@@ -51,6 +175,6 @@
 <!--模块化加载公共部分-->
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/common.js"></script>
 <!--service页面的js-->
-<script type="text/javascript" src="/esps-web/pages/index/js/main.js"></script>
+<!--<script type="text/javascript" src="/esps-web/pages/index/js/"></script>-->
 </body>
 </html>
