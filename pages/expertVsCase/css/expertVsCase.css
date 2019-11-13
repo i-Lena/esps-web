@@ -1,7 +1,4 @@
 /*  expertVsCase */
-.service {
-    height: 800px;
-}
 /* 导航条改颜色 */
 #expertVsCaseNav {
     color: #24a9b6;
@@ -41,9 +38,100 @@
 .inBanBtn a:hover {
     text-decoration: none;
 }
+/* tab栏 */
+.tab {
+    padding: 0.5rem 0;
+    font-size: 0.3rem;
+    color: #000;
+}
+.tabTitle {
+    position: relative;
+}
+.tabTitle::after {
+    /*display: table-cell;*/
+    content: '';
+    width: 1rem;
+    height: 0.06rem;
+    background-color: #24a9b6;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.1rem;
+}
+.tabTitle a,.tabTitle a:hover,.tabTitle a:active,.tabTitle a:link,.tabTitle a:visited {
+    color: #000;
+    text-decoration: none;
+}
+/* 专家团队列表*/
+.expertList ul,.expertList ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.expertList {
+    margin-bottom: 1rem;
+}
+.oddItemWrap {
 
-
-
+}
+.expertItem {
+    position: relative;
+    height: 250px;  /* 测试数据 */
+    margin-bottom: 0.2rem;
+}
+.expertItem .infoWrap {
+    position: absolute;
+    top: 0;
+    width: 92%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0;
+}
+.expertItem .infoCont {
+    width: 90%;
+    padding: 0 1rem;
+}
+.infoCont p {
+    text-align: justify;
+    line-height: 1.8em;
+}
+.expertItem .photoWrap {
+    position: absolute;
+    top: 0;
+    top: 0.6rem;
+    width: 16%;
+    padding-top: 16%;  /* 让高度等于宽度 */
+    background-color: #fff;
+    background: url(../images/photo.jpg) no-repeat;
+    background-position: center center;
+    border: 1px solid #eee;
+}
+.photoWrap img {
+    width: 50%;
+    /*height: 100%;*/
+}
+/* 专家项目 奇数*/
+.oddItem .infoWrap {
+    right: 0;
+    justify-content: flex-end;
+}
+.oddItem h3,.oddItem h4 {
+    text-align: right;
+}
+.oddItem .photoWrap {
+    left: 0;
+}
+/* 专家项目 偶数*/
+.evenItem .infoWrap {
+    left: 0;
+    background-color: #fff;
+}
+.evenItem h3,h4 {
+    text-align: left;
+}
+.evenItem .photoWrap {
+    right: 0;
+}
 /* ======================= 响应式适配 =========================*/
 /* 手机 */
 @media (max-width: 768px) {
@@ -72,6 +160,62 @@
         margin-top: 0.3rem;
         font-size: 0.28rem;
         padding: 0.15rem;
+    }
+    /* tab栏 */
+    .tab {
+        margin: 0 0.3rem;
+        padding: 0.3rem 0;
+        font-size: 0.28rem;
+    }
+    /* 专家列表 */
+    .expertList {
+        padding: 0.2rem 0.3rem;
+    }
+    .expertItem {
+        height: 6rem;
+        /*height: 100%;*/
+    }
+    .expertItem .infoWrap {
+        width: 100%;
+        padding: 0.2rem;
+    }
+    .expertItem .infoCont {
+        width: 100%;
+        padding: 0;
+    }
+    .infoCont h3 {
+        font-size: 0.32rem;
+    }
+    .infoCont h4 {
+        font-size: 0.3rem;
+    }
+    .oddItem h3,.oddItem h4 {
+        text-align: right;
+    }
+    .evenItem h3,.evenItem h4 {
+        text-align: left;
+    }
+    .infoCont p {
+        font-size: 0.28rem;
+        line-height: 1.8em;
+    }
+    .oddItem .photoWrap {
+        position: absolute;
+        top: 0.2rem;
+        left: 0.2rem;
+        width: 20%;
+        padding-top: 20%;
+        -webkit-background-size: 160% 160%;
+        background-size: 160% 160%;
+    }
+    .evenItem .photoWrap {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        width: 20%;
+        padding-top: 20%;
+        -webkit-background-size: 160% 160%;
+        background-size: 160% 160%;
     }
 }
 /* ======================= /响应式适配=========================*/
