@@ -35,83 +35,75 @@
     letter-spacing: 0.05rem;
     color: #fff;
 }
-.inBanBtn a:link,.inBanBtn a:visited,.inBanBtn a:hover.inBanBtn a:active {
+.inBanBtn a:hover {
     text-decoration: none;
 }
-/* tab栏 */
-.tab {
+/* 案例详情内容 */
+.contentWrap {
+    border-bottom: 1px solid #c9c9c9;
     padding: 0.5rem 0;
-    font-size: 0.3rem;
-    color: #000;
-}
-.tabTitle {
-    position: relative;
-    padding: 0.15rem 0;
-}
-.tabTitle::after {
-    /*display: table-cell;*/
-    content: '';
-    width: 0.8rem;
-    height: 0.06rem;
-    background-color: #24a9b6;
-    position: absolute;
-    top: 0.6rem;
-    left: 1.5rem;
-}
-.tabTitle a,.tabTitle a:link,.tabTitle a:visited,.tabTitle a:hover,.tabTitle a:active {
-    color: #000;
-    text-decoration: none;
-}
-.inputWrap,.btnWrap {
-    text-align: right;
-}
-.inputWrap input {
-    border: 1px solid #e6e6e6;
-    padding: 0.15rem;
-    width: 100%;
-}
-.searchBtn {
-    width: 100%;
-    background-color: #24a9b6;
-    text-align: center;
-    color: #fff;
-    padding: 0.15rem;
-}
-/* 案例列表 */
-.caseListWrap {
-    border: 1px solid #ccc;
-    padding: 0.5rem;
     margin-bottom: 0.5rem;
 }
-.caseListWrap ul,.caseListWrap ul li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.caseItemWrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.contentTitle {
+    text-align: center;
 }
 .expertName {
     display: inline-block;
     margin-right: 0.5rem;
 }
-.detailBtnWrap {
-    text-align: right;
+.contentText {
+
 }
-.detailBtn {
-    display: inline-block;
-    width: 3rem;
-    background-color: #24a9b6;
-    color: #fff;
-    text-decoration: none;
-    padding: 0.2rem;
+.contentLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.neighbor {
+    flex-shrink: 0; /* 不允许缩小 */
+    width: 70%;
+}
+.preWrap,.nextWrap {
+    margin: 0.3rem 0;
+    background-color: #f8f8f8;
+    /*padding: 0.3rem 0;*/
+    display: flex;
+}
+.preLogo,.nextLogo {
+    width: 15%;
+    background-color: #f3f3f3;
     text-align: center;
+    padding: 0.3rem 0;
 }
-.detailBtn:link,.detailBtn:visited,.detailBtn:hover,.detailBtn:active {
-    color: #fff;
+.pre,.next {
+    width: 85%;
+    padding: 0.3rem 0.2rem;
+}
+
+.backBtn {
+    display: inline-block;
+    color: #aeaeae;
     text-decoration: none;
+    padding: 0 1rem;
+    position: relative;
+}
+.backBtn:link,.backBtn:visited,.backBtn:hover,.backBtn:active {
+    color: #aeaeae;
+    text-decoration: none;
+}
+.backBtn:before,.backBtn:after {
+    content: '';
+    width: 0.9rem;
+    position: absolute;
+    top: 0.225rem;
+    height: 1px;
+    background-color: #aeaeae;
+}
+.backBtn:before {
+    right: 2.2rem;
+}
+.backBtn:after {
+    right: 0;
 }
 
 /* ======================= 响应式适配 =========================*/
@@ -143,35 +135,37 @@
         font-size: 0.28rem;
         padding: 0.15rem;
     }
-    /* tab栏 */
-    .tab {
+    /* 案例详情内容 */
+    .container {
         margin: 0 0.3rem;
+    }
+    .contentWrap {
+        margin: 0;
         padding: 0.3rem 0;
+    }
+    .contentTitle h3 {
+        font-size: 0.32rem;
+    }
+    .contentTitle p,.contentText {
         font-size: 0.28rem;
     }
-    /* 案例列表 */
-   .caseListWrap {
-       margin: 0 0.3rem 0.3rem;
-       padding: 0.2rem;
-   }
-   .caseItemWrap {
-       flex-direction: column;
-       align-items: flex-start;
-   }
-   .caseTitle {
-       font-size: 0.32rem;
-   }
-    .caseInfo {
-        font-size: 0.26rem;
+    .contentLink {
+        flex-direction: column;
+        align-items: flex-start;
     }
-   .detailBtnWrap {
-       align-self: flex-end; /* 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性*/
-   }
-   .detailBtn {
-       width: 1.8rem;
-       padding: 0.1rem;
-       font-size: 0.26rem;
-   }
+    .neighbor {
+        flex-shrink: 1; /* 不允许缩小 */
+        width: 100%;
+    }
+    .preLogo,.nextLogo {
+        padding: 0.1rem 0;
+    }
+    .pre,.next {
+        padding: 0.1rem 0.2rem;
+    }
+    .backLink {
+        margin-bottom: 0.5rem;
+    }
 
 }
 /* ======================= /响应式适配=========================*/

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>专家案例库</title>
+    <title>案例列表</title>
     <link rel="shortcut icon" href="/esps-web/favicon.ico"/>
     <link rel="stylesheet" href="/esps-web/assets/libs/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/esps-web/assets/common/assets/css/publicModule.css">
@@ -30,14 +30,59 @@
 <!--tab栏-->
 <section class="tab">
     <div class="container">
-        <div class="tabTitle">
-            <a href="expertVsCase.html">专家团队</a>
-            <span>/</span>
-            <a href="caseList.html">案例库</a>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="tabTitle">
+                    <a href="expertVsCase.html">专家团队</a>
+                    <span>/</span>
+                    <a href="caseList.html">案例库</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 searchWrap">
+                <div class="row search">
+                    <div class="col-md-9 col-sm-9 col-xs-9 inputWrap">
+                        <input type="text" placeholder="请输入搜索关键字">
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3 btnWrap">
+                        <div class="searchBtn">搜索</div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 </section>
-
+<!--案例列表-->
+<section>
+    <div class="container caseListWrap">
+        <ul>
+            <li class="caseItemWrap">
+                <div class="caseItem">
+                    <h3 class="caseTitle">标题一</h3>
+                    <p class="caseInfo">
+                        <span>解答专家：</span><span class="expertName">XXX</span>
+                        <span>发布时间：</span><span class="awsTime">2019-11-14</span>
+                    </p>
+                </div>
+                <div class="detailBtnWrap">
+                    <a class="detailBtn" href="caseDetail.html">查看详情</a>
+                </div>
+            </li>
+            <li class="caseItemWrap">
+                <div class="caseItem">
+                    <h3 class="caseTitle">标题一</h3>
+                    <p class="caseInfo">
+                        <span>解答专家：</span><span class="expertName">XXX</span>
+                        <span>发布时间：</span><span class="awsTime">2019-11-14</span>
+                    </p>
+                </div>
+                <div class="detailBtnWrap">
+                    <a class="detailBtn">查看详情</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
 <!--footer-->
 <div class="footer">
     <div slot="footer"></div>

@@ -134,7 +134,7 @@
 }
 /* ======================= 响应式适配 =========================*/
 /* 手机 */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     /* 内页 banner*/
     .inBanner {
         margin-top: 1rem;
@@ -216,6 +216,16 @@
         padding-top: 20%;
         -webkit-background-size: 160% 160%;
         background-size: 160% 160%;
+    }
+}
+/* pad */
+@media screen and (min-width:768px) and (max-width:992px){
+    .container {
+        width: 720px;
+    }
+    .expertItem {
+        height: 6rem;
+        /*height: 100%;*/
     }
 }
 /* ======================= /响应式适配=========================*/
