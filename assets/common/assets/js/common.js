@@ -14,3 +14,7 @@ function moduleLoad(url) {
         });
     })
 };
+
+/* 侧边栏相关js*/
+
+console.info("1111111111111111111")

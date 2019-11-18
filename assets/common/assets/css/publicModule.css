@@ -81,6 +81,133 @@ html {
     font-size: 0.24rem;
     cursor: pointer;
 }
+/* 遮罩层 */
+.shadow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,0.70);
+    z-index: 9990;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    visibility: hidden;
+}
+.shadow-visible {
+    opacity:1;
+    visibility:visible;
+}
+/* 侧边栏 */
+.sidebar {
+    position: fixed;
+    width: 500px;
+    height: 100%;
+    max-width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+    top: 0;
+    right: -500px;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-visible {
+    right: 0;
+}
+.closeWrap {
+    text-align: right;
+    color: #000;
+}
+.login,.register {
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
+.loginHide {
+    display: none;
+}
+.registerHide {
+    display: none;
+}
+.sidebarTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.fs30 {
+    font-size: 0.6rem;
+    color: #333;
+}
+.orange {
+    color: #f80;
+    cursor: pointer;
+}
+.formItem {
+    margin-top: 0.5rem;
+}
+.formItem input {
+    width: 100%;
+    padding: 0.2rem;
+    border: 1px solid #b6b6b6;
+    border-radius: 0.1rem;
+}
+.loginBtn {
+    width: 50%;
+    padding: 0.3rem;
+    text-align: center;
+    background-color: #24a9b6;
+    color: #fff;
+    font-size: 0.3rem;
+    margin: 0 auto;
+    border-radius: 0.1rem;
+}
+.sidebarFooter {
+    margin-top: 6rem;
+}
+.contactWay {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 0.3rem;
+    font-size: 0.34rem;
+    color: #333;
+}
+.companyName {
+    font-size: 0.32rem;
+    color: #333;
+}
+.companyAddress {
+    font-size: 0.28rem;
+    color: #5a5a5a;
+}
+/* 注册 */
+.verification {
+    display: flex;
+    justify-content: space-between;
+}
+.inputWrap {
+    width: 60%;
+}
+.vfWrap {
+    width: 38%;
+}
+.vfBtn {
+   width: 100%;
+    padding: 0.2rem;
+    border: 1px solid #b6b6b6;
+    border-radius: 0.1rem;
+    text-align: center;
+    background-color: #24a9b6;
+    color: #fff;
+}
+.register .sidebarFooter {
+    margin-top: 3rem;
+}
 /* footer */
 .comInfo {
     background-color: #1B1B1B;
