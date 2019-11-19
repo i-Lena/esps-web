@@ -16,5 +16,21 @@ function moduleLoad(url) {
 };
 
 /* 侧边栏相关js*/
-
-console.info("1111111111111111111")
+// 点击导航登录 及右侧侧边栏关闭
+function gotoSideBar() {
+    $(".shadow").addClass("shadowShow");
+    $(".sidebar").addClass("sidebarShow");
+}
+function closeSideBar() {
+    $(".shadow").removeClass("shadowShow");
+    $(".sidebar").removeClass("sidebarShow");
+}
+// gotoRegister 点击立即注册  立即登录
+function gotoRegister() {
+    $(".login").addClass("loginHide");
+    $(".register").removeClass("registerHide");
+}
+function gotoLogin() {
+    $(".register").addClass("registerHide");
+    $(".login").removeClass("loginHide");
+}

@@ -97,9 +97,12 @@ html {
     -o-transition: all 0.5s ease;
     visibility: hidden;
 }
-.shadow-visible {
+.shadowShow {
     opacity:1;
     visibility:visible;
+}
+.shadowHide {
+    visibility: hidden;
 }
 /* 侧边栏 */
 .sidebar {
@@ -110,7 +113,6 @@ html {
     z-index: 9999;
     background-color: #fff;
     top: 0;
-    right: -500px;
     transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -119,9 +121,13 @@ html {
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
+    right: -500px;
 }
-.sidebar-visible {
+.sidebarShow {
     right: 0;
+}
+.sidebarHide {
+    right: -500px;
 }
 .closeWrap {
     text-align: right;
@@ -204,6 +210,7 @@ html {
     text-align: center;
     background-color: #24a9b6;
     color: #fff;
+    box-sizing: border-box;
 }
 .register .sidebarFooter {
     margin-top: 3rem;

@@ -61,7 +61,7 @@
                             <li>
                                 <a href="/esps-web/pages/expertVsCase/expertVsCase.html" id="expertVsCaseNav">专家案例</a>
                             </li>
-                            <li><a href="#">个人中心</a></li>
+                            <li class=""><a href="#">个人中心</a></li>
                             <!--<li><a href="#">退出</a></li>-->
                             <!--<li><a href="#">登录</a></li>-->
                         </ul>
@@ -73,7 +73,7 @@
                 </ul>
             </nav>
             <div class="linkWrap hidden-xs">
-                <div class="loginLink">登录</div>
+                <div class="loginLink" onclick="gotoSideBar();">登录</div>
                 <div class="personInfo">
                     <a class="personPhoto"></a>
                     <div class="quit">退出</div>
@@ -82,14 +82,14 @@
             <!--遮罩层-->
             <div class="shadow"></div>
             <!--登录注册框-->
-            <div class="sidebar sidebar-visible">
+            <div class="sidebar">
                 <section class="close">
-                    <div class="closeWrap">X</div>
+                    <div class="closeWrap" onclick="closeSideBar();">X</div>
                 </section>
                 <section class="login">
                     <div class="sidebarTitle">
                         <div class="fs30">登录</div>
-                        <div>还没有账号？<span class="orange">立即注册</span></div>
+                        <div>还没有账号？<span class="orange" onclick="gotoRegister();">立即注册</span></div>
                     </div>
                     <div class="sidebarForm">
                         <div class="formItem">
@@ -116,7 +116,7 @@
                 <section class="register registerHide">
                     <div class="sidebarTitle">
                         <div class="fs30">注册</div>
-                        <div>已有账号，<span class="orange">马上登录</span></div>
+                        <div>已有账号，<span class="orange" onclick="gotoLogin();">马上登录</span></div>
                     </div>
                     <div class="sidebarForm">
                         <div class="formItem">
