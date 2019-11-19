@@ -63,10 +63,14 @@ html {
     border-radius: 5px;
     cursor: pointer;
 }
+.loginLinkHide {
+    display: none;
+}
 .personInfo {
     display: flex;
+}
+.personInfoHide {
     display: none;  /* 用于切换是显示登录前还是登录后*/
-
 }
 .personPhoto,.quit {
     display: inline-block;
@@ -173,6 +177,7 @@ html {
     font-size: 0.3rem;
     margin: 0 auto;
     border-radius: 0.1rem;
+    cursor: pointer;
 }
 .sidebarFooter {
     margin-top: 6rem;
@@ -212,6 +217,10 @@ html {
     color: #fff;
     box-sizing: border-box;
 }
+/*.vfBtn:link,.vfBtn:visited,.vfBtn:hover,.vfBtn:active {
+    color: #fff;
+    background-color: #449d44;
+}*/
 .register .sidebarFooter {
     margin-top: 3rem;
 }
