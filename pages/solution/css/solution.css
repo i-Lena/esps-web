@@ -173,11 +173,21 @@ body {
     .serviceTitle {
         padding: 0.3rem 0 0.2rem;
     }
+    .serviceTitle h2 {
+        font-size: 0.36rem;
+        font-weight: bold;
+    }
+    .serviceTitle h3 {
+        font-size: 0.32rem;
+    }
     .itemCont {
         margin: 0 0.3rem;
     }
     .serItemCon {
         padding: 0.3rem 0.3rem 0.2rem;
+    }
+    .serItemTitle {
+        font-size: 0.32rem;
     }
     .serItemText {
         margin: 0.2rem 0 0.3rem;
