@@ -164,10 +164,10 @@ html {
     color: #f80;
     cursor: pointer;
 }
-.formItem {
+.sidebarForm .formItem {
     margin-top: 0.5rem;
 }
-.formItem input {
+.sidebarForm .formItem input {
     width: 100%;
     padding: 0.2rem;
     border: 1px solid #b6b6b6;
