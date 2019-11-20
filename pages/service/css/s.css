@@ -25,6 +25,9 @@
     text-align: justify;
     line-height: 2em;
 }
+.introCont p {
+    text-indent: 2em;
+}
 .intruRemark {
     margin-top: 0.8rem;
 }
@@ -132,6 +135,9 @@
     }
     .introCont {
         font-size: 0.28rem;
+    }
+    .introCont p {
+        text-indent: 2em;
     }
     .intruRemarkItem p {
         font-size: 0.28rem;
