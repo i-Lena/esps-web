@@ -1,7 +1,6 @@
 /* 公共模块JS */
 $(document).ready(function () {
     moduleLoad("/esps-web/assets/common/publicModule.html");
-    checkCookie();
 });
 /* 模块加载 */
 function moduleLoad(url) {
@@ -13,6 +12,8 @@ function moduleLoad(url) {
             var body = $(_templates).find("#"+id).html();
             $(this).html(body);
         });
+        //ajax请求完后判断是否登录
+        checkLogin();
     })
 };
 
@@ -92,11 +93,11 @@ function countDown(obj,second){
 
 // 提交注册 
 function commitRegister() {
-    var phoneNumR = $("[name='phoneNumR']").val();
-    var verificationR = $("[name='verificationR']").val();
-    var emailR = $("[name='emailR']").val();
-    var pswR = $("[name='pswR']").val();
-    var pswConR = $("[name='pswConR']").val();
+    var phoneNumR = $("[name='phoneNumR']").val().trim();
+    var verificationR = $("[name='verificationR']").val().trim();
+    var emailR = $("[name='emailR']").val().trim();
+    var pswR = $("[name='pswR']").val().trim();
+    var pswConR = $("[name='pswConR']").val().trim();
     var registerUrl = commitRegisterUrl();
     console.info(registerUrl);
     if(phoneNumR == "") {
@@ -143,8 +144,8 @@ function commitRegister() {
 }
 // 提交登录
 function commitLogin() {
-    var phoneNumLogin = $("[name='phoneNumLogin']").val();
-    var pswLogin = $("[name='pswLogin']").val();
+    var phoneNumLogin = $("[name='phoneNumLogin']").val().trim();
+    var pswLogin = $("[name='pswLogin']").val().trim();
     var loginUrl = commitLoginUrl();
     if(phoneNumLogin == "") {
         layer.alert("请输入手机号！");
@@ -160,11 +161,80 @@ function commitLogin() {
             dataType: "json",
             success: function (data) {
                 console.info(data);
+                if (data.api_status==0){
+                    setCookie("uid",data.data.uid,7);
+                    setCookie("token",data.data.token,7);
+                    setCookie("nickName",data.data.nickName,7);
+                    setCookie("portrait",data.data.portrait,7);
+                    setCookie("login_phone",data.data.login_phone,7);
+                    layer.alert("登录成功",function (index) {
+                        window.location.reload();
+                        layer.close(index);
+                    });
+                }else{
+                    layer.alert(data.api_msg);
+                }
+
             },
             error: function (e) {
                 layer.alert("登录请求错误，请联系后台管理员!");
             }
         })
+    }
+}
+// 退出登录
+function logout() {
+    //delete cookie
+    deleteCookie("uid");
+    deleteCookie("token");
+    deleteCookie("nickName");
+    deleteCookie("portrait");
+    deleteCookie("login_phone");
+    layer.alert('退出成功！', function(index){
+        window.location.reload();
+        checkLogin();
+        layer.close(index);
+    });
+}
+/* 检查是否登录 */
+function checkLogin() {
+    var uid = getCookie("uid");
+    var token = getCookie("token");
+    var nickName = getCookie("nickName");
+    var portrait = getCookie("portrait");
+    var loginInfoUrl = getLoginInfoUrl();
+    if(uid == "" && token == "") {
+        // console.info(11100000);
+        $(".loginLink").removeClass("loginLinkHide");
+        $(".personInfo").addClass("personInfoHide");
+    }else {
+        $.ajax({
+            url: loginInfoUrl,
+            Type: "post",
+            data: "uid=" + uid + "&token=" + token,
+            dataType: "json",
+            success: function (data) {
+                // console.info(data);
+                if(data.api_status == 0) {
+                    // console.info(222200000);
+                    var photoSrc = getImgUrl() + data.data.portrait;
+                    // console.info(photoSrc);
+                    $(".loginLink").addClass("loginLinkHide");
+                    $(".personInfo").removeClass("personInfoHide");
+                    //显示头像
+                    if(photoSrc != "") {
+                        $(".photoImg").attr("src",photoSrc);
+                    }
+                }else {
+                    console.info(data.api_msg);
+                }
+            },
+            error: function (e) {
+                console.info("错误，请联系后台管理员！");
+            }
+
+        });
+
     }
 }
 
@@ -193,24 +263,9 @@ function getCookie(cname) {
     }
     return "";
 }
-/* 检查cookie */
-function checkCookie() {
-    var uid = getCookie("uid");
-    var token = getCookie("token");
-    var nickName = getCookie("nickName");
-    var portrait = getCookie("portrait");
-    console.info(uid);
-    console.info(token);
-    console.info(nickName);
-    console.info(portrait);
-    if(uid != "" && token != "") {
-        console.info(111);
-        // $(".linkWrap .personInfo").addClass("personInfoHide");
-        // $(".linkWrap .loginLink").removeClass("loginLinkHide");
-    }else {
-        console.info(2222);
-        // $(".linkWrap .loginLink").addClass("loginLinkHide");
-        // $(".linkWrap .personInfo").removeClass("personInfoHide");
-    }
+//
+function deleteCookie(cname ) {
+    document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
 }
 /* ============================ /关于cookie的存取 ==================================*/

@@ -8,7 +8,7 @@ var uRl = 'http://192.168.0.122';
 
 /* 上线接口 */
 // var uRl = 'http://www.2400online.com';
-console.info(uRl);
+// console.info(uRl);
 
 // 获取短信验证码
 function sendVerificationUrl() {
@@ -23,6 +23,21 @@ function commitRegisterUrl() {
 // 提交登录
 function commitLoginUrl() {
     var url = uRl + "/api_customer/login/doLogin";
+    return url;
+}
+// 获取登录信息
+function getLoginInfoUrl() {
+    var url = uRl + "/api_customer/userinfo/info";
+    return url;
+}
+//获取头像地址信息
+function getImgUrl() {
+    var url = uRl;
+    return url;
+}
+// 注销登录
+function getLogoutUrl() {
+    var url = uRl + "/web/login/unsetLogin";
     return url;
 }
 
