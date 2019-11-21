@@ -1,13 +1,13 @@
 /* 接口 */
+/* 上线接口 */
+// var uRl = 'http://www.2400online.com';
 /* 本地接口 */
 // var uRl = window.location.origin;
 /*开发接口*/
 var uRl = 'http://192.168.8.8:8084';
 /* 测试接口 */
-var uRl = 'http://192.168.0.122';
+var uRl = 'http://192.168.0.122:8081';
 
-/* 上线接口 */
-// var uRl = 'http://www.2400online.com';
 // console.info(uRl);
 
 /* ===================== 注册与登录 =========================*/

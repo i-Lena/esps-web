@@ -39,82 +39,54 @@
     </div>
 </section>
 <!--专家团队列表-->
-<section class="expertList">
-    <!--1-->
-    <ul class="oddItemWrap">
-        <li>
-            <div class="container expertItem oddItem">
-                <div class="infoWrap">
-                    <div class="infoCont">
-                        <h3>李振波</h3>
-                        <h4>项目经理</h4>
-                        <p>
-                            2013年入职青岛海天炜业，主要负责工作：自动化运维及检维修服务，包括Honeywell PKS/TPS/TDC3000系统，YOKOGAWA CS1000/3000，CENTUM VP系统等。在海天炜业参与了几十余次现场服务，包括了多家控制系统的集成、扩容、升级、点检等方面的现场技术服务。多次担任项目经理，参与负责某些大型石化企业的系统点检工作。项目实施期间，严谨的工作态度及技术能力得到了客户的好评和肯定。
-                        </p>
-                    </div>
-                </div>
-                <div class="photoWrap">
-<!--                    <img src="images/photo.jpg" alt="">-->
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="container expertItem evenItem">
-                <div class="infoWrap">
-                    <div class="infoCont">
-                        <h3>李振波</h3>
-                        <h4>项目经理</h4>
-                        <p>
-                            2013年入职青岛海天炜业，主要负责工作：自动化运维及检维修服务，包括Honeywell PKS/TPS/TDC3000系统，YOKOGAWA CS1000/3000，CENTUM VP系统等。在海天炜业参与了几十余次现场服务，包括了多家控制系统的集成、扩容、升级、点检等方面的现场技术服务。多次担任项目经理，参与负责某些大型石化企业的系统点检工作。项目实施期间，严谨的工作态度及技术能力得到了客户的好评和肯定。
-                        </p>
-                    </div>
-                </div>
-                <div class="photoWrap">
-
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="container expertItem oddItem">
-                <div class="infoWrap">
-                    <div class="infoCont">
-                        <h3>李振波</h3>
-                        <h4>项目经理</h4>
-                        <p>
-                            2013年入职青岛海天炜业，主要负责工作：自动化运维及检维修服务，包括Honeywell PKS/TPS/TDC3000系统，YOKOGAWA CS1000/3000，CENTUM VP系统等。在海天炜业参与了几十余次现场服务，包括了多家控制系统的集成、扩容、升级、点检等方面的现场技术服务。多次担任项目经理，参与负责某些大型石化企业的系统点检工作。项目实施期间，严谨的工作态度及技术能力得到了客户的好评和肯定。
-                        </p>
-                    </div>
-
-                </div>
-                <div class="photoWrap">
-
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="container expertItem evenItem">
-                <div class="infoWrap">
-                    <div class="infoCont">
-                        <h3>李振波</h3>
-                        <h4>项目经理</h4>
-                        <p>
-                            2013年入职青岛海天炜业，主要负责工作：自动化运维及检维修服务，包括Honeywell PKS/TPS/TDC3000系统，YOKOGAWA CS1000/3000，CENTUM VP系统等。在海天炜业参与了几十余次现场服务，包括了多家控制系统的集成、扩容、升级、点检等方面的现场技术服务。多次担任项目经理，参与负责某些大型石化企业的系统点检工作。项目实施期间，严谨的工作态度及技术能力得到了客户的好评和肯定。
-                        </p>
-                    </div>
-                </div>
-                <div class="photoWrap">
-
-                </div>
-            </div>
-        </li>
-    </ul>
-
-    <!--2-->
+<section class="expertList" id="experts">
+    <ul></ul>
 </section>
 <!--footer-->
 <div class="footer">
     <div slot="footer"></div>
 </div>
+<!--clone-->
+<ul id="oddClone" style="display: none;">
+    <li>
+        <div class="container expertItem oddItem">
+            <div class="infoWrap">
+                <div class="infoCont">
+                    <h3 class="personName">李振波</h3>
+                    <h4 class="personLabel">项目经理</h4>
+                    <p class="personDetail">
+                        2013年入职青岛海天炜业，主要负责工作：自动化运维及检维修服务，包括Honeywell PKS/TPS/TDC3000系统，YOKOGAWA CS1000/3000，CENTUM VP系统等。在海天炜业参与了几十余次现场服务，包括了多家控制系统的集成、扩容、升级、点检等方面的现场技术服务。多次担任项目经理，参与负责某些大型石化企业的系统点检工作。项目实施期间，严谨的工作态度及技术能力得到了客户的好评和肯定。
+                    </p>
+                </div>
+            </div>
+            <div class="photoWrap hidden-xs">
+                <div class="photoDiv">
+                    <img class="imgSrc" src="images/photo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+<ul id="evenClone" style="display: none;">
+    <li>
+        <div class="container expertItem evenItem">
+            <div class="infoWrap">
+                <div class="infoCont">
+                    <h3 class="personName">李振波</h3>
+                    <h4 class="personLabel">项目经理</h4>
+                    <p class="personDetail">
+                        2013年入职青岛海天炜业，主要负责工作：自动化运维及检维修服务，包括Honeywell PKS/TPS/TDC3000系统，YOKOGAWA CS1000/3000，CENTUM VP系统等。在海天炜业参与了几十余次现场服务，包括了多家控制系统的集成、扩容、升级、点检等方面的现场技术服务。多次担任项目经理，参与负责某些大型石化企业的系统点检工作。项目实施期间，严谨的工作态度及技术能力得到了客户的好评和肯定。
+                    </p>
+                </div>
+            </div>
+            <div class="photoWrap hidden-xs">
+                <div class="photoDiv">
+                    <img class="imgSrc" src="images/photo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
 <script src="/esps-web/assets/libs/jquery/jquery.js"></script>
 <script src="/esps-web/assets/libs/bootstrap/js/bootstrap.js"></script>
 <!--引入layui-->
@@ -122,7 +94,7 @@
 <!--模块化加载公共部分-->
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/common.js"></script>
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/api.js"></script>
-<!--service页面的js-->
-<!--<script type="text/javascript" src="/esps-web/pages/index/js/main.js"></script>-->
+<!--expertVsCase页面的js-->
+<script type="text/javascript" src="/esps-web/pages/expertVsCase/js/expertList.js"></script>
 </body>
 </html>

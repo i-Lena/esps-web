@@ -70,9 +70,7 @@
 .expertList {
     margin-bottom: 1rem;
 }
-.oddItemWrap {
 
-}
 .expertItem {
     position: relative;
     height: 250px;  /* 测试数据 */
@@ -82,6 +80,7 @@
     position: absolute;
     top: 0;
     width: 92%;
+    height: 100%;
     background-color: #eee;
     display: flex;
     align-items: center;
@@ -97,17 +96,23 @@
 }
 .expertItem .photoWrap {
     position: absolute;
-    top: 0;
-    top: 0.6rem;
+    /*top: 0.6rem;*/
     width: 16%;
-    padding-top: 16%;  /* 让高度等于宽度 */
-    background-color: #fff;
-    background: url(../images/photo.jpg) no-repeat;
-    background-position: center center;
-    border: 1px solid #eee;
+    height: 100%;
+    /*padding-top: 16%;  !* 让高度等于宽度 *!*/
+    /*background-color: #fff;*/
+    /*background: url(../images/photo.jpg) no-repeat;*/
+    /*background-position: center center;*/
+    display: flex;
+    align-items: center;
+}
+.photoDiv {
+    display: flex;
 }
 .photoWrap img {
-    width: 50%;
+    width:100%;
+    height: 100%;
+
     /*height: 100%;*/
 }
 /* 专家项目 奇数*/
@@ -117,6 +122,7 @@
 }
 .oddItem h3,.oddItem h4 {
     text-align: right;
+    margin: 0.3rem 0;
 }
 .oddItem .photoWrap {
     left: 0;
@@ -128,6 +134,7 @@
 }
 .evenItem h3,h4 {
     text-align: left;
+    margin: 0.3rem 0;
 }
 .evenItem .photoWrap {
     right: 0;
@@ -172,7 +179,7 @@
         padding: 0.2rem 0.3rem;
     }
     .expertItem {
-        height: 6rem;
+        height: 6.5rem;
         /*height: 100%;*/
     }
     .expertItem .infoWrap {
