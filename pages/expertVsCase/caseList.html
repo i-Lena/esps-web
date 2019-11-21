@@ -42,51 +42,49 @@
             <div class="col-md-6 col-sm-6 col-xs-12 searchWrap">
                 <div class="row search">
                     <div class="col-md-9 col-sm-9 col-xs-9 inputWrap">
-                        <input type="text" placeholder="请输入搜索关键字">
+                        <input type="text" id="searchContent" placeholder="请输入搜索关键字">
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-3 btnWrap">
-                        <div class="searchBtn">搜索</div>
+                        <div class="searchBtn" onclick="searchCases();">搜索</div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 <!--案例列表-->
 <section>
     <div class="container caseListWrap">
-        <ul>
-            <li class="caseItemWrap">
-                <div class="caseItem">
-                    <h3 class="caseTitle">标题一</h3>
-                    <p class="caseInfo">
-                        <span>解答专家：</span><span class="expertName">XXX</span>
-                        <span>发布时间：</span><span class="awsTime">2019-11-14</span>
-                    </p>
-                </div>
-                <div class="detailBtnWrap">
-                    <a class="detailBtn" href="caseDetail.html">查看详情</a>
-                </div>
-            </li>
-            <li class="caseItemWrap">
-                <div class="caseItem">
-                    <h3 class="caseTitle">标题一</h3>
-                    <p class="caseInfo">
-                        <span>解答专家：</span><span class="expertName">XXX</span>
-                        <span>发布时间：</span><span class="awsTime">2019-11-14</span>
-                    </p>
-                </div>
-                <div class="detailBtnWrap">
-                    <a class="detailBtn">查看详情</a>
-                </div>
-            </li>
-        </ul>
+        <!--案例库-->
+        <div id="caseLib"></div>
+    </div>
+    <!--分页-->
+    <div class="container partPageWrap">
+        <div id="partPage" class="partPage"></div>
     </div>
 </section>
 <!--footer-->
 <div class="footer">
     <div slot="footer"></div>
+</div>
+<div id="cloneTab" style="display: none;">
+    <div class="caseItemWrap">
+        <div class="caseItem">
+            <h3 class="caseTitle">标题一</h3>
+            <p class="caseInfo">
+                <span>解答专家：</span><span class="expertName">XXX</span>
+                <span>发布时间：</span><span class="awsTime">2019-11-14</span>
+            </p>
+        </div>
+        <div class="detailBtnWrap">
+            <a class="detailBtn" href="javascript:void(0);" name="" class="detailId" onclick="goCaseDetail(this);">查看详情</a>
+        </div>
+    </div>
+</div>
+<div id="noneData" style="display: none;">
+    <div class="noDataTip">
+        <div style="text-align: center;">暂无相关内容。</div>
+    </div>
 </div>
 <script src="/esps-web/assets/libs/jquery/jquery.js"></script>
 <script src="/esps-web/assets/libs/bootstrap/js/bootstrap.js"></script>
@@ -95,7 +93,7 @@
 <!--模块化加载公共部分-->
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/common.js"></script>
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/api.js"></script>
-<!--service页面的js-->
-<!--<script type="text/javascript" src="/esps-web/pages/index/js/main.js"></script>-->
+<!--expertVsCase页面的js-->
+<script type="text/javascript" src="/esps-web/pages/expertVsCase/js/caseList.js"></script>
 </body>
 </html>

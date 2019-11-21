@@ -4,13 +4,18 @@
 /* 本地接口 */
 // var uRl = window.location.origin;
 /*开发接口*/
-var uRl = 'http://192.168.8.8:8084';
+// var uRl = 'http://192.168.8.8:8084';
 /* 测试接口 */
 var uRl = 'http://192.168.0.122:8081';
 
 // console.info(uRl);
 
+
 /* ===================== 注册与登录 =========================*/
+// 获取origin地址
+function getOriginUrl() {
+    return uRl;
+}
 // 获取短信验证码
 function sendVerificationUrl() {
     var url = uRl + "/api_customer/register/send_verification";
