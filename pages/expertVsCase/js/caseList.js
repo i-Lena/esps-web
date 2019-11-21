@@ -39,7 +39,7 @@ function getTableData(str) {
                                     /*$tr.find(".askName").text(item.askName);*/
                                     $caseItem.find(".expertName").text(item.answer_expert_name);
                                     $caseItem.find(".awsTime").text(item.answer_time);
-                                    $caseItem.find(".detailId").attr("name",item.id);
+                                    $caseItem.find(".detailBtn").attr("name",item.id);
                                     arr.push($caseItem.get(0).outerHTML);
                                 });
                                 return arr.join('');
