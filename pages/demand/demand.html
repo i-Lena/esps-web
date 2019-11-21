@@ -45,16 +45,16 @@
 </section>
 <!--表单信息-->
 <section>
-    <div class="container formWrap">
+    <div class="container formWrap" id="demandForm">
         <div class="row formItem">
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-3">
-                        <label><span class="redStar">*</span>业务种类：</label>
+                        <label>业务种类<span class="redStar">*</span>：</label>
                     </div>
                     <div class="col-md-9">
-                        <select name="category" placehold="请选择业务种类">
-                            <option value="1">系统检维修</option>
+                        <select name="category" id="category" placehold="请选择业务种类">
+                            <option value="0">请选择业务种类</option>
                         </select>
                     </div>
                 </div>
@@ -65,10 +65,10 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-3">
-                        <label><span class="redStar">*</span>公司名称：</label>
+                        <label>公司名称<span class="redStar">*</span>：</label>
                     </div>
                     <div class="col-md-9">
-                        <input type="text" placeholder="请输入公司名称">
+                        <input type="text" name="companyName" placeholder="请输入公司名称">
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                         <label>联系人姓名：</label>
                     </div>
                     <div class="col-md-9">
-                        <input type="text" placeholder="请输入联系人姓名">
+                        <input type="text" name="contactName" placeholder="请输入联系人姓名">
                     </div>
                 </div>
             </div>
@@ -90,17 +90,17 @@
                         <label>联系人职务：</label>
                     </div>
                     <div class="col-md-9">
-                        <input type="text" placeholder="请输入公司名称">
+                        <input type="text" name="contactPost" placeholder="请输入公司名称">
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-3">
-                        <label><span class="redStar">*</span>联系人电话：</label>
+                        <label>联系人电话<span class="redStar">*</span>：</label>
                     </div>
                     <div class="col-md-9">
-                        <input type="text" placeholder="请输入联系人姓名">
+                        <input type="text" name="contactNum" placeholder="请输入联系人姓名">
                     </div>
                 </div>
             </div>
@@ -117,8 +117,8 @@
                         <label>省：</label>
                     </div>
                     <div class="col-md-10">
-                        <select name="" id="">
-                            <option value="1">山东</option>
+                        <select name="province" onchange="getCity();">
+                            <option value="0">请选择所在省</option>
                         </select>
                     </div>
                 </div>
@@ -129,8 +129,8 @@
                         <label>市：</label>
                     </div>
                     <div class="col-md-10">
-                        <select name="">
-                            <option value="1">青岛</option>
+                        <select name="city" onchange="getArea();">
+                            <option value="0">请选择所在市</option>
                         </select>
                     </div>
                 </div>
@@ -141,8 +141,8 @@
                         <label>区：</label>
                     </div>
                     <div class="col-md-10">
-                        <select name="">
-                            <option value="1">崂山</option>
+                        <select name="area">
+                            <option value="0">请选择所在区</option>
                         </select>
                     </div>
                 </div>
@@ -154,12 +154,16 @@
             </div>
         </div>
         <div class="row formItem">
-            <div class="col-md-12">
-                <textarea name="" rows="10"></textarea>
+            <div class="col-md-12 despWrap">
+                <textarea name="description" rows="10" maxlength="1000" placeholder="请详细描述需求内容(字数限制1000字)..."></textarea>
+                <div class="despCount">
+                    <span class="wordsCount">0</span>
+                    <span>/ 1000</span>
+                </div>
             </div>
         </div>
         <div class="row formItem formFooter">
-            <div class="btnWrap">提交</div>
+            <div class="btnWrap" onclick="submitDemand();">提交</div>
             <div class="privateDeclare">
                 <span class="redStar">*隐私声明：</span>
                 您所填写的信息仅用于与您的沟通
@@ -173,10 +177,12 @@
 </div>
 <script src="/esps-web/assets/libs/jquery/jquery.js"></script>
 <script src="/esps-web/assets/libs/bootstrap/js/bootstrap.js"></script>
+<!--引入layui-->
+<script src="/esps-web/assets/libs/layui/layui.all.js"></script>
 <!--模块化加载公共部分-->
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/common.js"></script>
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/api.js"></script>
-<!--service页面的js-->
-<!--<script type="text/javascript" src="/esps-web/pages/index/js/"></script>-->
+<!--demand页面的js-->
+<script type="text/javascript" src="/esps-web/pages/demand/js/demand.js"></script>
 </body>
 </html>

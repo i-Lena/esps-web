@@ -10,6 +10,7 @@ var uRl = 'http://192.168.0.122';
 // var uRl = 'http://www.2400online.com';
 // console.info(uRl);
 
+/* ===================== 注册与登录 =========================*/
 // 获取短信验证码
 function sendVerificationUrl() {
     var url = uRl + "/api_customer/register/send_verification";
@@ -40,6 +41,38 @@ function getLogoutUrl() {
     var url = uRl + "/web/login/unsetLogin";
     return url;
 }
+
+/* ===================== /注册与登录 =========================*/
+
+/*================== 一键发布需求 =========================*/
+/* 业务种类*/
+function getCategoryUrl() {
+    var url = uRl + "/api_employer/project/project_types";
+    return url;
+}
+
+/* 三级地址*/
+//省
+function getProvinceUrl() {
+    var url = uRl + "/api_customer/common/get_province";
+    return url;
+}
+//市
+function getCityUrl() {
+    var url = uRl + "/api_customer/common/get_citys";
+    return url;
+}
+//区
+function getAreaUrl() {
+    var url = uRl + "/api_customer/common/get_district";
+    return url;
+}
+//一键发布需求提交
+function submitDemandInfo() {
+    var url = uRl + "/api_customer/demand/add";
+    return url;
+}
+/*================== /一键发布需求 =====================*/
 
 
 
@@ -72,30 +105,3 @@ function caseDetail() {
     return url;
 }
 
-/* 业务种类*/
-function getCategoryUrl() {
-    var url = uRl + "/api_employer/project/project_types";
-    return url;
-}
-
-/* 三级地址*/
-//省
-function getProvinceUrl() {
-    var url = uRl + "/api_customer/common/get_province";
-    return url;
-}
-//市
-function getCityUrl() {
-    var url = uRl + "/api_customer/common/get_citys";
-    return url;
-}
-//区
-function getAreaUrl() {
-    var url = uRl + "/api_customer/common/get_district";
-    return url;
-}
-//一键发布需求提交
-function submitDemandInfo() {
-    var url = uRl + "/api_customer/demand/add";
-    return url;
-}
