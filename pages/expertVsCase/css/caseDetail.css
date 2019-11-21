@@ -47,12 +47,15 @@
 .contentTitle {
     text-align: center;
 }
+.contentWrap .caseTitle {
+    margin: 0.3rem 0;
+}
 .expertName {
     display: inline-block;
     margin-right: 0.5rem;
 }
 .contentText {
-
+    margin: 0.5rem 0;
 }
 .contentLink {
     display: flex;
@@ -68,6 +71,7 @@
     background-color: #f8f8f8;
     /*padding: 0.3rem 0;*/
     display: flex;
+    cursor: pointer;
 }
 .preLogo,.nextLogo {
     width: 15%;

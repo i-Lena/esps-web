@@ -78,35 +78,27 @@ function submitDemandInfo() {
     return url;
 }
 /*================== /一键发布需求 =====================*/
-
-
-
-
-
-
-
-/*  原来  后慢慢一点点整理*/
-/* 专家团队 */
+/* ======================== 专家案例库 ==============================*/
+// 专家团队
 function expertsUrl() {
     var url = uRl + "/api_employer/expert/expert_list";
     return url;
 }
 
-/* 案例列表 */
+// 案例列表
 function caseList() {
     var url = uRl + "/api_employer/case/case_list";
     return url;
 }
 
-/* 案例搜索 */
-function caseSearch() {
-    var url = uRl + "/api_employer/case/case_list";
-    return url;
-}
-
-/* 案例详情 */
-function caseDetail() {
+// 案例详情
+function getCaseDetailUrl() {
     var url = uRl + "/api_customer/case/case_detail";
     return url;
 }
+/* ======================== /专家案例库 ==============================*/
+
+
+
+
 

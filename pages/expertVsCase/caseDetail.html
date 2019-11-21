@@ -33,7 +33,7 @@
     <div class="container">
         <div class="contentWrap">
             <div class="contentTitle">
-                <h3>标题一</h3>
+                <h3 class="caseTitle">标题一</h3>
                 <p>
                     <span>解答专家：</span><span class="expertName">XXX</span>
                     <span>发布时间：</span><span class="awsTime">2019-11-14</span>
@@ -45,12 +45,12 @@
         </div>
         <div class="contentLink">
             <div class="neighbor">
-                <div class="preWrap">
+                <div class="preWrap" onclick="goNextOrPre(this);">
                     <div class="preLogo">上一篇</div>
                     <div class="pre">fsdfdsfdsf</div>
                 </div>
                 <div class="nextWrap">
-                    <div class="nextLogo">下一篇</div>
+                    <div class="nextLogo" onclick="goNextOrPre(this);">下一篇</div>
                     <div class="next">sdfdsfds</div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
 <!--模块化加载公共部分-->
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/common.js"></script>
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/api.js"></script>
-<!--service页面的js-->
-<!--<script type="text/javascript" src="/esps-web/pages/index/js/main.js"></script>-->
+<!--expertVsCase页面的js-->
+<script type="text/javascript" src="/esps-web/pages/expertVsCase/js/caseDetail.js"></script>
 </body>
 </html>
