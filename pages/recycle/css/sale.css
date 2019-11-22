@@ -37,7 +37,118 @@ body {
     text-decoration: none;
 }
 /* 表单 */
-
+.unLoginTips {
+    text-align: center;
+    padding: 0.2rem 0;
+    background-color: #EBEBE4;
+    color: #f00;
+    margin: 0.3rem auto;
+}
+.unLoginTipsHide {
+    display: none;
+}
+.saleTitle {
+    margin: 0.2rem auto 0.5rem;
+    font-size: 0.72rem;
+    color: #333;
+}
+.saleForm {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+}
+.saleItemTitle {
+    padding: 0 0 0.3rem;
+    border-bottom: 1px dashed #ddd;
+}
+.titleText {
+    font-size: 0.4rem;
+    position: relative;
+    padding: 0 0 0 0.3rem
+}
+.titleText:before {
+    display: inline-block;
+    content: '';
+    width: 0.1rem;
+    height: 0.4rem;
+    background-color: #24a9b6;
+    position: absolute;
+    top: 0.08rem;
+    left: 0;
+}
+/* 表单内 样式*/
+.saleLabel,.saleInput {
+    margin: 0.3rem 0 0;
+}
+.saleLabel {
+    text-align: right;
+    padding: 0.1rem;
+    font-size: 0.3rem;
+}
+.redStar {
+    color: #f00;
+}
+.saleInput input[type='text'] {
+    width: 100%;
+    padding: 0.1rem;
+}
+.radioDiv {
+    display: inline-block;
+    padding: 0.1rem;
+}
+.radioDiv label {
+    display: inline-block;
+    margin-left: 0.1rem;
+    font-weight: normal;
+}
+.saleInput select {
+    width: 100%;
+    padding: 0.1rem;
+}
+.submitBtn {
+    width: 4rem;
+    padding: 0.2rem 0;
+    margin: 0.8rem auto 0.5rem auto;
+    text-align: center;
+    background-color: #24a9b6;
+    color: #fff;
+}
+.privateTips {
+    text-align: center;
+}
+/* 上传图片 */
+.imgWrap {
+    display: flex;
+    padding: 0.1rem;
+}
+.imgItem {
+    width: 20%;
+    height: 2.5rem;  /* 定高*/
+    background-color: #ddd;
+    margin: 0.2rem;
+    border: 1px dashed #ddd;
+}
+.imgItem1 {
+    background: url("/esps-web/pages/recycle/images/1.png");
+    background-size: cover;
+}
+.imgItem2 {
+    background: url("/esps-web/pages/recycle/images/2.png");
+    background-size: cover;
+}
+.imgItem3 {
+    background: url("/esps-web/pages/recycle/images/3.png");
+    background-size: cover;
+}
+.imgItem4 {
+    background: url("/esps-web/pages/recycle/images/4.png");
+    background-size: cover;
+}
+.imgItem5 {
+    background: url("/esps-web/pages/recycle/images/5.png");
+    background-size: cover;
+}
 
 /* ======================= 响应式适配 =========================*/
 /* 手机 */
@@ -69,6 +180,46 @@ body {
         padding: 0.15rem;
     }
     /* 表单 */
+    .unLoginTips {
+        margin: 0.3rem;
+    }
+    .saleTitle {
+        margin: 0.2rem 0.3rem;
+        font-size: 0.36rem;
+        color: #333;
+    }
+    .saleForm {
+        margin: 0.3rem;
+        padding: 0.3rem;
+    }
+    .saleItemTitle {
+        padding: 0 0 0.2rem;
+    }
+    .titleText {
+        font-size: 0.32rem;
+    }
+    /* 表单内 样式*/
+    .saleLabel,.saleInput {
+        margin: 0.2rem 0 0;
+    }
+    .saleLabel {
+        text-align: left;
+        font-size: 0.28rem;
+        padding: 0 0 0 0.3rem;
+    }
+    .selectDiv {
+        margin: 0 0 0.2rem 0;
+    }
+    /* 上传图片 */
+    .imgWrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .imgItem {
+        width: 43%;
+        height: 2rem;  /* 100px*/
+    }
 
 
 }
