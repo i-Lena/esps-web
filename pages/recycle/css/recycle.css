@@ -59,6 +59,7 @@ body {
     border: 1px solid #ccc;
     margin: 0 0.25rem;
     padding: 0.8rem;
+    position: relative;
     /*height: 500px;  !* 测试用*!*/
 }
 .waysItemTitle {
@@ -78,7 +79,8 @@ body {
 }
 .waysItemTitle h3 {
     font-size: 0.44rem;
-    color: #FFCE54;
+    /*color: #FFCE54;*/
+    color: #24a9b6;
     font-weight: bold;
 }
 .waysItemTitle h4 {
@@ -106,8 +108,38 @@ body {
 }
 .linkBtn:hover {
     text-decoration: none;
-    color: #FFCE54;
-
+    /*color: #FFCE54;*/
+    color: #24a9b6;
+}
+/* 鼠标滑过效果 */
+.waysItem:before,
+.waysItem:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.waysItem:before {
+    border-right: 2px solid #24a9b6;
+    border-left: 2px solid #24a9b6;
+    transform: scaleY(0);
+    transform-origin: 100% 0 0;
+}
+.waysItem:after {
+    border-bottom: 2px solid #24a9b6;
+    border-top: 2px solid #24a9b6;
+    transform: scaleX(0);
+    transform-origin: 0 100% 0;
+}
+.waysItem:hover:before {
+    transform: scaleY(0.5);
+}
+.waysItem:hover:after {
+    transform: scaleX(0.5);
 }
 
 
