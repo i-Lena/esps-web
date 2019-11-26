@@ -98,7 +98,18 @@ function getCaseDetailUrl() {
 }
 /* ======================== /专家案例库 ==============================*/
 
-
+/* ========================== 闲置卡件处置 ================================*/
+// 上传图片
+function getUploadImgUrl() {
+    var url = uRl + "/api_customer/file/upload_img";
+    return url;
+}
+// 卖断
+function getSaleUrl() {
+    var url = uRl + "/api_customer/ht_service/recovery_apply";
+    return url;
+}
+/* ========================== /闲置卡件处置 ================================*/
 
 
 

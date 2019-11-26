@@ -58,6 +58,9 @@ body {
     padding: 0.8rem 1rem;
     margin-bottom: 0.5rem;
 }
+.saleForm select[disabled] {
+    background-color: #EBEBE4;
+}
 .saleItemTitle {
     padding: 0 0 0.3rem;
     border-bottom: 1px dashed #ddd;
@@ -113,6 +116,7 @@ body {
     text-align: center;
     background-color: #24a9b6;
     color: #fff;
+    cursor: pointer;
 }
 .privateTips {
     text-align: center;
@@ -130,24 +134,29 @@ body {
     border: 1px dashed #ddd;
 }
 .imgItem1 {
-    background: url("/esps-web/pages/recycle/images/1.png");
+    background: url("/esps-web/pages/recycle/images/preview1.png");
     background-size: cover;
 }
 .imgItem2 {
-    background: url("/esps-web/pages/recycle/images/2.png");
+    background: url("/esps-web/pages/recycle/images/preview2.png");
     background-size: cover;
 }
 .imgItem3 {
-    background: url("/esps-web/pages/recycle/images/3.png");
+    background: url("/esps-web/pages/recycle/images/preview3.png");
     background-size: cover;
 }
 .imgItem4 {
-    background: url("/esps-web/pages/recycle/images/4.png");
+    background: url("/esps-web/pages/recycle/images/preview4.png");
     background-size: cover;
 }
 .imgItem5 {
-    background: url("/esps-web/pages/recycle/images/5.png");
+    background: url("/esps-web/pages/recycle/images/preview5.png");
     background-size: cover;
+}
+.imgItem input[type='file'] {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
 
 /* ======================= 响应式适配 =========================*/
