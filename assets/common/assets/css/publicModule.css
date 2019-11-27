@@ -229,6 +229,20 @@ html {
 .register .sidebarFooter {
     margin-top: 3rem;
 }
+
+/* 手机登录模块*/
+.unloginMode {
+
+}
+.unloginHide {
+    display: none !important;
+}
+.loginMode {
+
+}
+.loginHide {
+    display: none !important;
+}
 /* footer */
 .comInfo {
     background-color: #1B1B1B;

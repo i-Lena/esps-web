@@ -207,6 +207,9 @@ function checkLogin() {
         // console.info(11100000);
         $(".loginLink").removeClass("loginLinkHide");
         $(".personInfo").addClass("personInfoHide");
+        //手机端显示登录与注册
+        $(".unloginMode").removeClass("unloginHide");
+        $(".loginMode").addClass("loginHide");
     }else {
         $.ajax({
             url: loginInfoUrl,
@@ -221,6 +224,9 @@ function checkLogin() {
                     // console.info(photoSrc);
                     $(".loginLink").addClass("loginLinkHide");
                     $(".personInfo").removeClass("personInfoHide");
+                    //手机端显示个人中心与退出
+                    $(".unloginMode").addClass("unloginHide");
+                    $(".loginMode").removeClass("loginHide");
                     //显示头像
                     if(photoSrc != "") {
                         $(".photoImg").attr("src",photoSrc);
