@@ -37,27 +37,27 @@
         </div>
         <div class="sidebarForm">
             <div class="formItem">
-                <input type="text" name="" placeholder="手机号">
+                <input type="text" name="mPhoneNumR" placeholder="手机号">
             </div>
             <div class="formItem verification">
                 <div class="inputWrap">
-                    <input type="text" name="" placeholder="手机验证码">
+                    <input type="text" name="mVyfR" placeholder="手机验证码">
                 </div>
                 <div class="vfWrap">
-                    <input class="vfBtn" type="button" value="获取验证码" onclick="" />
+                    <input class="vfBtn" type="button" value="获取验证码" onclick="mSendVefy(this,60);" />
                 </div>
             </div>
             <div class="formItem">
-                <input type="text" name="" placeholder="电子邮箱">
+                <input type="text" name="mEmailR" placeholder="电子邮箱">
             </div>
             <div class="formItem">
-                <input type="password" name="" placeholder="密码">
+                <input type="password" name="mPswR" placeholder="密码">
             </div>
             <div class="formItem">
-                <input type="password" name="" placeholder="确认密码">
+                <input type="password" name="mPswConR" placeholder="确认密码">
             </div>
             <div class="formItem">
-                <div class="loginBtn" onclick="">立即注册</div>
+                <div class="loginBtn" onclick="commitMRegister();">立即注册</div>
             </div>
         </div>
     </div>
