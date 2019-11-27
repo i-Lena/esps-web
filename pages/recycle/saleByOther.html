@@ -25,11 +25,196 @@
     <div class="container inBannerWrap">
         <div class="inBTitle">优质的自动化服务供应商</div>
         <div class="inBSubTitle">可信赖的供应商</div>
-<!--        <div class="inBanBtn"><a href="/esps-web/pages/demand/demand.html">一键发布需求</a></div>-->
     </div>
 </section>
-<!-- autoService-->
-
+<!-- 尚未登录提示信息-->
+<section>
+    <div class="container unLoginTips">
+        尚未登录，不能填写相关信息！
+    </div>
+</section>
+<!--主内容-->
+<section>
+    <!--标题-->
+    <div class="container saleTitle">委托销售</div>
+    <!--表单-->
+    <div class="container saleForm">
+        <section class="saleItem">
+            <div class="saleItemTitle">
+                <p class="titleText">产品信息</p>
+            </div>
+            <div class="saleItemCon">
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span class="redStar">*</span>
+                        <span>厂家名称</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <input type="text" name="factoryName" placeholder="请输入产品的厂家名称">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span class="redStar">*</span>
+                        <span>型号</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <input type="text" name="model" placeholder="请输入产品型号">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span class="redStar">*</span>
+                        <span>订货号</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <input type="text" name="orderNum" placeholder="请输入订货号">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span>适应系统</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <div class="radioDiv">
+                            <input type="radio" name="system" id="Windows" value="1" checked />
+                            <label for="Windows">Windows</label>
+                        </div>
+                        <div class="radioDiv">
+                            <input type="radio" name="system" id="Linux" value="2" />
+                            <label for="Linux">Linux</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span>处置方式</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <div class="radioDiv">
+                            <input type="radio" name="dealWay" id="sellByOther" value="1" checked />
+                            <label for="sellByOther">代发货</label>
+                        </div>
+                        <div class="radioDiv">
+                            <input type="radio" name="dealWay" id="sellBySelf" value="2" />
+                            <label for="sellBySelf">自己发货</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span>是否有包装</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <div class="radioDiv">
+                            <input type="radio" name="hasPack" id="yes" value="1" />
+                            <label for="yes">有</label>
+                        </div>
+                        <div class="radioDiv">
+                            <input type="radio" name="hasPack" id="no" value="2" checked />
+                            <label for="no">无</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span>新旧程度</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <input type="text" name="degree" placeholder="请输入新旧程度">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span>上传产品图片</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <div class="row imgWrap">
+                            <div class="imgItem imgItem1">
+                                <input type="text" id="pic1" value="" hidden />
+                                <input type="file" onchange="uploadImg(this,'pic1')">
+                            </div>
+                            <div class="imgItem imgItem2">
+                                <input type="text" id="pic2" value="" hidden />
+                                <input type="file" onchange="uploadImg(this,'pic2')">
+                            </div>
+                            <div class="imgItem imgItem3">
+                                <input type="text" id="pic3" value="" hidden />
+                                <input type="file" onchange="uploadImg(this,'pic3')">
+                            </div>
+                            <div class="imgItem imgItem4">
+                                <input type="text" id="pic4" value="" hidden />
+                                <input type="file" onchange="uploadImg(this,'pic4')">
+                            </div>
+                            <div class="imgItem imgItem5">
+                                <input type="text" id="pic5" value="" hidden />
+                                <input type="file" onchange="uploadImg(this,'pic5')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="saleItem">
+            <div class="saleItemTitle">
+                <p class="titleText">寄送地址</p>
+            </div>
+            <div class="saleItemCon">
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span class="redStar">*</span>
+                        <span>地址信息</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-12 selectDiv">
+                                <select name="province" onchange="getCity();">
+                                    <option value="0">请选择所在省</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12 selectDiv">
+                                <select name="city" onchange="getArea();">
+                                    <option value="0">请选择所在市</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select name="area">
+                                    <option value="0">请选择所在区</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span class="redStar">*</span>
+                        <span>联系电话</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <input type="text" name="telNum" placeholder="请输入联系电话">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12 saleLabel">
+                        <span class="redStar">*</span>
+                        <span>寄送地址详情</span>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 saleInput">
+                        <input type="text" name="addressDetail" placeholder="请输入寄送地址详情">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="saleItem">
+            <input type="text" name="formType" value="2" hidden>
+            <div class="submitBtn" onclick="submitSaleForm();">提交</div>
+            <div class="privateTips">
+                <span class="redStar">*隐私声明：</span>
+                <span>您所填写的信息仅用于与您的沟通</span>
+            </div>
+        </section>
+    </div>
+</section>
 <!--footer-->
 <div class="footer">
     <div slot="footer"></div>
@@ -41,7 +226,7 @@
 <!--模块化加载公共部分-->
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/common.js"></script>
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/api.js"></script>
-<!--sale页的js-->
-<script src="/esps-web/pages/recycle/js/sale.js"></script>
+<!--saleByOther页的js-->
+<script src="/esps-web/pages/recycle/js/saleByOther.js"></script>
 </body>
 </html>
