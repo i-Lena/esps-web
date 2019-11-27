@@ -269,7 +269,7 @@ function getCookie(cname) {
     }
     return "";
 }
-//
+// 删除cookie
 function deleteCookie(cname ) {
     document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 
