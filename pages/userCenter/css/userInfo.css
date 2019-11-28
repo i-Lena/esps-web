@@ -8,7 +8,7 @@ body {
 .userCenterWrap {
     display: flex;
     justify-content: space-between;
-    height: 650px; /* 测试用*/
+    min-height: 650px; /* 测试用*/
 }
 .userCenterNav {
     width: 20%;
@@ -105,6 +105,39 @@ body {
     border-radius: 0.1rem;
     cursor: pointer;
 }
+/*  /以下是userInfo页面 独有*/
+/* ========== 以下是修改密码editPsw页面独有 ==========*/
+.pswForm {
+    padding: 0.5rem 0.8rem;
+}
+.pswItem {
+   margin: 0.2rem 0;
+}
+.pswItem label {
+    width: 10%;
+    padding: 0.1rem;
+    text-align: right;
+    font-size: 0.28rem;
+    font-weight: normal;
+    color: #777;
+}
+.pswItem input {
+    width: 70%;
+    padding: 0.1rem;
+}
+.editPswBtn {
+    margin: 0.5rem 0 0 0.4rem;
+    width: 2rem;
+    padding: 0.15rem 0;
+    font-size: 0.28rem;
+    background-color: #24a9b6;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.1rem;
+    cursor: pointer;
+}
+/* ========== /以下是修改密码editPsw页面独有 ==========*/
+
 
 /* ======================= 手机端适配 ================== */
 @media (max-width: 768px) {
@@ -115,7 +148,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        /*height: 500px;  !* 测试 *!*/
+        min-height: 300px;  /* 测试 */
         padding: 0.3rem 0.2rem 0 0.2rem;
     }
     .userCenterNav {
@@ -126,7 +159,10 @@ body {
         width: 100%;
         margin-top: 0.3rem;
     }
-    /* userInfo 独有*/
+    /*==== userInfo 独有 =======*/
+    .pswForm {
+        padding: 0.5rem 0.3rem;
+    }
     .userInfoForm {
         padding: 0.3rem;
     }
@@ -140,5 +176,23 @@ body {
     .saveBtn {
         margin: 0.5rem auto 0 auto;
     }
+    /*==== /userInfo 独有 =======*/
+    /*==== 修改密码editPsw 独有 =======*/
+    .pswItem label {
+        width: 30%;
+        padding: 0.1rem;
+        text-align: right;
+        font-size: 0.28rem;
+        font-weight: normal;
+        color: #777;
+    }
+    .pswItem input {
+        width: 60%;
+        padding: 0.1rem;
+    }
+    .editPswBtn {
+        margin: 0.5rem auto 0 auto;
+    }
+    /*==== /修改密码editPsw 独有 =======*/
 }
 /* ======================= /手机端适配 ================== */
