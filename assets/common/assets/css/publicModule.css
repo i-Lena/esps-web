@@ -323,6 +323,34 @@ html {
     text-align: center;
 }
 /* /footer 新写*/
+/* 返回TOP */
+.backTopDiv {
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+.backTop {
+    background-color: transparent;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 2px solid #4251b6;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 0.9rem;
+    color: #4251b6;
+    font-size: 0.5rem;
+    font-weight: bold;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+.backTop:hover {
+    color: #000;
+}
+.backTopHide {
+    display: none;
+}
 
 /*====================  响应式适配 ===================*/
 

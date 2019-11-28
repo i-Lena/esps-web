@@ -1,6 +1,14 @@
 /* 公共模块JS */
 $(document).ready(function () {
     moduleLoad("/esps-web/assets/common/publicModule.html");
+    //返回顶部的显示与隐藏
+    $(window).scroll(function () {
+        if($(window).scrollTop() >= 250) {
+            $(".backTopDiv").fadeIn(300);
+        }else {
+            $(".backTopDiv").fadeOut(300);
+        }
+    });
 });
 /* 模块加载 */
 function moduleLoad(url) {
@@ -244,6 +252,13 @@ function checkLogin() {
     }
 }
 
+// ======================== 点击返回顶部 =========================
+function backTop() {
+    $('html,body').animate({
+        scrollTop: 0
+    },1000);
+    return false;
+}
 /* ============================ 关于cookie的存取 ==================================*/
 
 /* 设置cookie */
