@@ -1,0 +1,45 @@
+/* 个人中心 */
+body {
+    background-color: #f4f4f4;
+}
+.userCenter {
+    margin-top: 1.6rem;
+}
+.userCenterWrap {
+    display: flex;
+    justify-content: space-between;
+    height: 650px; /* 测试用*/
+}
+.userCenterNav {
+    width: 20%;
+    margin: 0.5rem 0;
+    background-color: #fff;
+}
+.userCenterCon {
+    width: 77%;
+    margin: 0.5rem 0;
+    background-color: #fff;
+}
+
+/* ======================= 手机端适配 ================== */
+@media (max-width: 768px) {
+    .userCenter {
+        margin-top: 1rem;
+    }
+    .userCenterWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 500px;  /* 测试 */
+        padding: 0.3rem 0.3rem 0 0.3rem;
+    }
+    .userCenterNav {
+        width: 100%;
+        margin: 0;
+    }
+    .userCenterCon {
+        width: 100%;
+        margin-top: 0.3rem;
+    }
+}
+/* ======================= /手机端适配 ================== */
