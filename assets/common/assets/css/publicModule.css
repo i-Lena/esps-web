@@ -351,6 +351,35 @@ html {
 .backTopHide {
     display: none;
 }
+/* =========== 个人中心导航 ===========*/
+.userNav {
+    display: flex;
+    flex-direction: column;
+}
+.userNavItem {
+    margin-bottom: 0.2rem;
+}
+.userNavTitle {
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 0.1rem;
+    font-size: 0.28rem;
+    color: #000;
+}
+.userNavCon {
+    padding: 0.1rem 0 0 0.3rem;
+}
+.userNavSec {
+    margin: 0.2rem;
+}
+.userNavSec a {
+    font-size: 0.24rem;
+    color: #777;
+    text-decoration: none;
+}
+.userNavSec a:hover {
+    color: #24a9b6;
+}
+/* =========== /个人中心导航 ===========*/
 
 /*====================  响应式适配 ===================*/
 
@@ -417,5 +446,20 @@ html {
         padding: 0.2rem 0;
     }
     /* /底部footer新写 */
+    /* ========= 个人中心导航  ======= */
+    .userNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .userNavItem {
+        width: 50%;
+        padding: 0 0.2rem;
+        margin-bottom: 0rem;
+    }
+    .userNavCon {
+        padding: 0.1rem 0;
+    }
+    /* ========= / 个人中心导航  ======= */
 }
 /*====================  /响应式适配 ===================*/
