@@ -126,19 +126,5 @@ body {
         width: 100%;
         margin-top: 0.3rem;
     }
-    /* userInfo 独有*/
-    .userInfoForm {
-        padding: 0.3rem;
-    }
-    .userInfoItem {
-        margin-top: 0.2rem;
-        width: 100%;
-    }
-    .userInfoItem label {
-        width: 20%;
-    }
-    .saveBtn {
-        margin: 0.5rem auto 0 auto;
-    }
 }
 /* ======================= /手机端适配 ================== */
