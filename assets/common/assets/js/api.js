@@ -127,5 +127,15 @@ function editPswUrl() {
     var url = uRl + "/api_customer/user_setup/revise_login_password";
     return url;
 }
+// 获取一键发布需求列表
+function getDemandListUrl() {
+    var url = uRl + "/api_customer/demand/my_demand_list";
+    return url;
+}
+// 获取闲置卡件处置列表
+function getDealWayListUrl() {
+    var url = uRl + "/api_customer/ht_service/recovery_apply";
+    return url;
+}
 /* ========================== /个人中心 ================================*/
 
