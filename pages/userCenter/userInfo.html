@@ -32,24 +32,25 @@
             <div class="userMainCon">
                 <div class="photoImg">
                     <div class="picBox"></div>
+                    <input type="text" name="photoCommit" hidden />
                     <div class="editPic">
                         <div class="editPicBtn">修改头像
-                            <input type="file" hidden onclick="" />
+                            <input type="file" hidden onchange="uploadPhoto(this);" />
                         </div>
                     </div>
                 </div>
                 <div class="userInfoForm">
                     <div class="userInfoItem">
                         <label><span>&nbsp;</span>账号</label>
-                        <span>123243434</span>
+                        <span class="phoneNum">123243434</span>
                     </div>
                     <div class="userInfoItem">
                         <label><span class="redStar">*</span>昵称</label>
-                        <input type="text" name="" placeholder="请输入您的昵称" />
+                        <input type="text" name="nickName" placeholder="请输入您的昵称" />
                     </div>
                     <div class="userInfoItem">
                         <label><span class="redStar">*</span>邮箱</label>
-                        <input type="text" name="" placeholder="请输入您的电子邮箱" />
+                        <input type="text" name="email" placeholder="请输入您的电子邮箱" />
                     </div>
                     <div class="userInfoItem">
                         <div class="saveBtn">保存</div>
@@ -70,5 +71,7 @@
 <!--模块化加载公共部分-->
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/common.js"></script>
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/api.js"></script>
+<!--userInfo页面的js-->
+<script type="text/javascript" src="/esps-web/pages/userCenter/js/userInfo.js"></script>
 </body>
 </html>

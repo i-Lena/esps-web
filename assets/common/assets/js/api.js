@@ -6,7 +6,7 @@
 /*开发接口*/
 // var uRl = 'http://192.168.8.8:8084';
 /* 测试接口 */
-var uRl = 'http://192.168.0.122:8081';
+var uRl = 'http://192.168.0.122:80';
 
 // console.info(uRl);
 
@@ -111,5 +111,21 @@ function getSaleUrl() {
 }
 /* ========================== /闲置卡件处置 ================================*/
 
-
+/* ========================== 个人中心 ================================*/
+//修改头像
+function editPhotoUrl() {
+    var url = uRl + "/api_customer/userinfo/portrait_upload";
+    return url;
+}
+//修改个人信息
+function editUserInfoUrl() {
+    var url = uRl + "/api_customer/userinfo/update_info";
+    return url;
+}
+//修改密码
+function editPswUrl() {
+    var url = uRl + "/api_customer/user_setup/revise_login_password";
+    return url;
+}
+/* ========================== /个人中心 ================================*/
 
