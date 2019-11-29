@@ -2,7 +2,7 @@ $(function () {
     //获取专家列表
     $.ajax({
         url: expertsUrl(),
-        type: "post",
+        type: "get",
         data: '',
         dataType: "json",
         success: function (data) {
