@@ -199,7 +199,7 @@ function logout() {
     deleteCookie("portrait");
     deleteCookie("login_phone");
     layer.alert('退出成功！', function(index){
-        window.location.reload();
+        window.location.href = "/esps-web/index.html";
         checkLogin();
         layer.close(index);
     });

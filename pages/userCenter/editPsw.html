@@ -33,18 +33,18 @@
                 <div class="pswForm">
                     <div class="pswItem">
                         <label>原密码</label>
-                        <input type="text" name="" placeholder="请输入原密码">
+                        <input type="password" name="oldPsw" placeholder="请输入原密码">
                     </div>
                     <div class="pswItem">
                         <label>新密码</label>
-                        <input type="text" name="" placeholder="请输入新密码">
+                        <input type="password" name="newPsw" placeholder="请输入新密码">
                     </div>
                     <div class="pswItem">
                         <label>确认密码</label>
-                        <input type="text" name="" placeholder="请再次输入新密码">
+                        <input type="password" name="confirmPsw" placeholder="请再次输入新密码">
                     </div>
                     <div class="pswItem">
-                        <div class="editPswBtn">保存</div>
+                        <div class="editPswBtn" onclick="editPsw();">保存</div>
                     </div>
                 </div>
             </div>
@@ -62,5 +62,7 @@
 <!--模块化加载公共部分-->
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/common.js"></script>
 <script type="text/javascript" src="/esps-web/assets/common/assets/js/api.js"></script>
+<!--editPsw页面的js-->
+<script type="text/javascript" src="/esps-web/pages/userCenter/js/editPsw.js"></script>
 </body>
 </html>
