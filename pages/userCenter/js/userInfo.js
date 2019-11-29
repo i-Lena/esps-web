@@ -12,10 +12,9 @@ function init() {
         dataType: "json",
         success: function (data) {
             var returnData = data.data;
-            console.info(returnData);
+            // console.info(returnData);
             $(".phoneNum").text(returnData.loginPhone);
             if(returnData.portrait) {
-                console.info("头像不为空");
                 //修改头像
                 var ImgUrl = getOriginUrl() + returnData.portrait;
                 // console.info(ImgUrl);
@@ -74,5 +73,38 @@ function uploadPhoto(obj) {
        error: function (e) {
            layer.alert("系统错误，请联系后台管理员！");
        }
+    });
+}
+
+// 保存修改信息
+function editUserInfo() {
+    var uid = getCookie("uid");
+    var token = getCookie("token");
+    var nickName = $("input[name='nickName']").val();
+    var email = $("input[name='email']").val();
+    if(nickName.trim() == "") {
+        layer.alert("昵称不能为空！");
+    }else if(email.trim() == "") {
+        layer.alert("电子邮箱不能为空！");
+    }
+    $.ajax({
+        url: editUserInfoUrl(),
+        type: "get",
+        data: "uid=" + uid + "&token=" + token + "&nickName=" + nickName + "&email=" + email,
+        dataType: "json",
+        success: function (data) {
+            console.info(data);
+            if(data.api_status == 0) {
+                layer.alert("信息保存成功！",{closeBtn: 0},function (index) {
+                    init();
+                    layer.close(index);
+                });
+            }else {
+                layer.alert(data.api_msg);
+            }
+        },
+        error: function (e) {
+            layer.alert("系统错误，请联系后台管理员！");
+        }
     });
 }
