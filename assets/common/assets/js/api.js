@@ -52,7 +52,7 @@ function getLogoutUrl() {
 /*================== 一键发布需求 =========================*/
 /* 业务种类*/
 function getCategoryUrl() {
-    var url = uRl + "/api_employer/project/project_types";
+    var url = uRl + "/api_customer/project/project_types";
     return url;
 }
 
@@ -81,13 +81,13 @@ function submitDemandInfo() {
 /* ======================== 专家案例库 ==============================*/
 // 专家团队
 function expertsUrl() {
-    var url = uRl + "/api_employer/expert/expert_list";
+    var url = uRl + "/api_customer/expert/expert_list";
     return url;
 }
 
 // 案例列表
 function caseList() {
-    var url = uRl + "/api_employer/case/case_list";
+    var url = uRl + "/api_customer/case/case_list";
     return url;
 }
 
