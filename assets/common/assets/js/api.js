@@ -134,7 +134,7 @@ function getDemandListUrl() {
 }
 // 获取闲置卡件处置列表
 function getDealWayListUrl() {
-    var url = uRl + "/api_customer/ht_service/recovery_apply";
+    var url = uRl + "/api_customer/demand/recovery_equipment_list";
     return url;
 }
 /* ========================== /个人中心 ================================*/

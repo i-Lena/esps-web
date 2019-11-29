@@ -10,9 +10,9 @@ function initList() {
        var uid= getCookie("uid");
        var token = getCookie("token");
         table.render({
-            elem: '#demandList',
+            elem: '#dealwayList',
             height: 500,
-            url: getDemandListUrl(),
+            url: getDealWayListUrl(),
             method: 'get',
             where: {
                 uid: uid,
@@ -23,11 +23,14 @@ function initList() {
             },
             limit: 10,
             cols: [[
-                { field: "demandSn",title: "需求编号",width: '20%',sort: true,fixed: "left"},
-                { field: "demandTypeName",title: "需求类型",width: '20%' },
-                { field: "content",title: "需求内容",width: '20%' },
-                { field: "createtime",title: "提交时间",width: '20%' },
-                { field: "examine_state",title: "需求状态",width: '20%' },
+                { field: "recoveryType",title: "卖断/委托销售",width: '15.5%',sort: true,fixed: "left"},
+                { field: "factory",title: "厂家",width: '12.5%' },
+                { field: "system",title: "适用系统",width: '12%' },
+                { field: "is_packing",title: "是否有包装",width: '10%' },
+                { field: "old_degree",title: "新旧程度",width: '12.5%' },
+                { field: "deal_way",title: "处置方式",width: '12.5%' },
+                { field: "addressDetail",title: "地址",width: '12.5%' },
+                { field: "phone",title: "联系电话",width: '12.5%' },
             ]],
             parseData: function (res) {
                 // console.info(res);
