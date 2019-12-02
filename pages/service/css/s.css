@@ -1,3 +1,36 @@
+/* banner更换图片 */
+.inBanner1 {
+    margin-top: 1.6rem;
+    background: url("../images/inBanner_s1_2000x410.png") no-repeat;
+}
+.inBanner2 {
+    margin-top: 1.6rem;
+    background: url("../images/inBanner_s2_2000x410.png") no-repeat;
+}
+.inBanner3 {
+    margin-top: 1.6rem;
+    background: url("../images/inBanner_s3_2000x410.png") no-repeat;
+}
+.inBanner4 {
+    margin-top: 1.6rem;
+    background: url("../images/inBanner_s4_2000x410.png") no-repeat;
+}
+.inBanner5 {
+    margin-top: 1.6rem;
+    background: url("../images/inBanner_s5_2000x410.png") no-repeat;
+}
+.inBanner6 {
+    margin-top: 1.6rem;
+    background: url("../images/inBanner_s6_2000x410.png") no-repeat;
+}
+.inBanner7 {
+    margin-top: 1.6rem;
+    background: url("../images/inBanner_s7_2000x410.png") no-repeat;
+}
+.inBanner8 {
+    margin-top: 1.6rem;
+    background: url("../images/inBanner_s8_2000x410.png") no-repeat;
+}
 /* 介绍*/
 .intro {
     background-color: #fff;
@@ -124,6 +157,39 @@
 }
 /* ======================== 响应式适配 ==========================*/
 @media (max-width: 768px) {
+    /* 内页 banner*/
+    .inBanner1 {
+        margin-top: 1rem;
+        background: url("../images/inBanner_s1_640x340.png") no-repeat;
+    }
+    .inBanner2 {
+        margin-top: 1rem;
+        background: url("../images/inBanner_s2_640x340.png") no-repeat;
+    }
+    .inBanner3 {
+        margin-top: 1rem;
+        background: url("../images/inBanner_s3_640x340.png") no-repeat;
+    }
+    .inBanner4 {
+        margin-top: 1rem;
+        background: url("../images/inBanner_s4_640x340.png") no-repeat;
+    }
+    .inBanner5 {
+        margin-top: 1rem;
+        background: url("../images/inBanner_s5_640x340.png") no-repeat;
+    }
+    .inBanner6 {
+        margin-top: 1rem;
+        background: url("../images/inBanner_s6_640x340.png") no-repeat;
+    }
+    .inBanner7 {
+        margin-top: 1rem;
+        background: url("../images/inBanner_s7_640x340.png") no-repeat;
+    }
+    .inBanner8 {
+        margin-top: 1rem;
+        background: url("../images/inBanner_s8_640x340.png") no-repeat;
+    }
     .intro,.brandIntro,.industry {
         padding: 0 0.3rem;
     }
