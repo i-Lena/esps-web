@@ -1,10 +1,14 @@
 /* banner */
 .inBanner {
     margin-top: 1.6rem;
-    background: url("../images/inBanner_s_2000x410.png") no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    background-size: cover;
+    color: #fff;
+}
+.inBannerLogin {
+    margin-top: 1.6rem;
+    color: #fff;
+}
+.inBannerRegister {
+    margin-top: 1rem;
     color: #fff;
 }
 .inBannerWrap {
@@ -40,7 +44,18 @@
     /* 内页 banner*/
     .inBanner {
         margin-top: 1rem;
-        background: url("../images/inBanner_s_640x340.png") no-repeat;
+    }
+    .inBannerLogin {
+        margin-top: 1rem;
+        background: url("../images/inBanner_login_640x340.png") no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        color: #fff;
+    }
+    .inBannerRegister {
+        margin-top: 1rem;
+        background: url("../images/inBanner_register_640x340.png") no-repeat;
         background-position: center center;
         -webkit-background-size: cover;
         background-size: cover;
