@@ -19,6 +19,10 @@ function moduleLoad(url) {
             var id = $(this).attr('slot');
             var body = $(_templates).find("#"+id).html();
             $(this).html(body);
+            /* 客服 */
+            if (id == "footer"){
+                $("body").append("<script src=\"/esps-web/pages/chat/chat.js\"></script>");
+            }
         });
         //ajax请求完后判断是否登录
         checkLogin();
