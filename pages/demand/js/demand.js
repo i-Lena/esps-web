@@ -1,6 +1,6 @@
 
 $(function () {
-   checkLoginOrNot();
+    checkLoginOrNot();
     getCategory();
 });
 // 判断是否登录
@@ -32,13 +32,15 @@ function getCategory() {
         success: function (data) {
             if(data.api_status == 0) {
                 var returnData = data.data;
+                console.info(returnData);
                 for(let item in returnData) {
                     let $opt = "<option value=" + returnData[item].value + ">" + returnData[item].name + "</option>";
                     $("#category").append($opt);
                     //url有参数时进行定位
                     var demandTypeCode = getDemandType();
                     if(demandTypeCode != "" && demandTypeCode != null ) {
-                        $("#sCategory").find("option[value=" + demandTypeCode + "]").attr("selected",true);
+                        console.info(234324324);
+                        $("#category").find("option[value='" + demandTypeCode + "']").attr("selected",true);
                     }
                 }
             }else if(data.api_status == 90002 || data.api_status == 90003 || data.api_status == 90004) {
@@ -63,7 +65,8 @@ function getDemandType() {
             return unescape(r[2]);
         return null; // 返回参数值
     }
-    var code = $.getUrlParam("type");
+    code = $.getUrlParam("type");
+    console.info(code);
     return code;
 }
 
