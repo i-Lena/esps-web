@@ -1,6 +1,6 @@
 /* 接口 */
 /* 上线接口 */
-// var uRl = 'http://www.2400online.com';
+// var uRl = 'http://app.2400online.com';
 /* 本地接口 */
 // var uRl = window.location.origin;
 /*开发接口*/
