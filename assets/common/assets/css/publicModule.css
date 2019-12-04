@@ -222,6 +222,9 @@ html {
     color: #fff;
     box-sizing: border-box;
 }
+.vfWrap input[disabled] {
+    background-color: #b6b6b6;
+}
 .register .sidebarFooter {
     margin-top: 3rem;
 }
