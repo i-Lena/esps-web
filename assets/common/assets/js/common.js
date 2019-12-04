@@ -233,7 +233,7 @@ function checkLogin() {
                 if(data.api_status == 0) {
                     // console.info(222200000);
                     var photoSrc = getImgUrl() + data.data.portrait;
-                    console.info(photoSrc);
+                    // console.info(photoSrc);
                     $(".loginLink").addClass("loginLinkHide");
                     $(".personInfo").removeClass("personInfoHide");
                     //手机端显示个人中心与退出
