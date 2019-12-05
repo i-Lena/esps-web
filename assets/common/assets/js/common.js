@@ -61,6 +61,10 @@ function sendVerification(obj,second) {
         $.ajax({
             url: sendVyfUrl,
             type: "get",
+            xhrFields:{
+                withCredentials:true
+            },
+            crossDomain: true,
             data: "login_phone=" + phoneNumR,
             dataType: "json",
             success: function (data) {
@@ -134,6 +138,7 @@ function commitRegister() {
             xhrFields:{
                 withCredentials:true
             },
+            crossDomain: true,
             data: "login_phone=" + phoneNumR + "&verification=" + verificationR + "&password=" + pswR + "&confirm_password=" + pswConR +"&email=" + emailR,
             dataType: "json",
             success: function (data) {

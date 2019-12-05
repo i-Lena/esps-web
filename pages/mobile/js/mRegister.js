@@ -9,6 +9,10 @@ function mSendVefy(obj,second) {
         $.ajax({
             url: sendVyfUrl,
             type: "get",
+            xhrFields:{
+                withCredentials:true
+            },
+            crossDomain: true,
             data: "login_phone=" + mPhoneNumR,
             dataType: "json",
             success: function (data) {
@@ -82,6 +86,7 @@ function commitMRegister() {
             xhrFields:{
                 withCredentials:true
             },
+            crossDomain: true,
             data: "login_phone=" + mPhoneNumR + "&verification=" + mVyfR + "&password=" + mPswR + "&confirm_password=" + mPswConR +"&email=" + mEmailR,
             dataType: "json",
             success: function (data) {
