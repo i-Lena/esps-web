@@ -9,7 +9,7 @@ $(function () {
     var token = getCookie("token");
     $.ajax({
         url: getCaseDetailUrl(),
-        Type: "post",
+        type: "post",
         data: {"uid": uid,"token":token,"id":id},
         dataType: "json",
         success: function (data) {

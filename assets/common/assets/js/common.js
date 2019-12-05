@@ -60,7 +60,7 @@ function sendVerification(obj,second) {
         console.info(sendVyfUrl);
         $.ajax({
             url: sendVyfUrl,
-            Type: "post",
+            type: "post",
             data: "login_phone=" + phoneNumR,
             dataType: "json",
             success: function (data) {
@@ -130,7 +130,7 @@ function commitRegister() {
     }else {
         $.ajax({
             url: registerUrl,
-            Type: "post",
+            type: "post",
             data: "login_phone=" + phoneNumR + "&verification=" + verificationR + "&password=" + pswR + "&confirm_password=" + pswConR +"&email=" + emailR,
             dataType: "json",
             success: function (data) {
@@ -168,7 +168,7 @@ function commitLogin() {
     }else {
         $.ajax({
             url: loginUrl,
-            Type: "post",
+            type: "post",
             data: "login_phone=" + phoneNumLogin + "&password=" + pswLogin,
             dataType: "json",
             success: function (data) {
@@ -225,7 +225,7 @@ function checkLogin() {
     }else {
         $.ajax({
             url: loginInfoUrl,
-            Type: "post",
+            type: "post",
             data: "uid=" + uid + "&token=" + token,
             dataType: "json",
             success: function (data) {

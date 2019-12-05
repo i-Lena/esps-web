@@ -7,7 +7,7 @@ function init() {
     var token = getCookie("token");
     $.ajax({
         url: getLoginInfoUrl(),
-        Type: "post",
+        type: "post",
         data: "uid=" + uid + "&token=" + token,
         dataType: "json",
         success: function (data) {

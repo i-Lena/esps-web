@@ -219,7 +219,7 @@ function submitSaleForm() {
     }else {
         $.ajax({
             url: getSaleUrl(),
-            Type: "post",
+            type: "post",
             data: formData,
             dataType: "json",
             success: function (data) {
