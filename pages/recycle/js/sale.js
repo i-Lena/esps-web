@@ -157,9 +157,9 @@ function submitSaleForm() {
     var area = $("select[name='area']").val();
     var telNum = $("input[name='telNum']").val();
     var addressDetail = $("input[name='addressDetail']").val();
-    var system = $("input[name='system']").val();
+    var system = $("input[name='system']:checked").val();
     // console.info(system);
-    var hasPack = $("input[name='hasPack']").val();
+    var hasPack = $("input[name='hasPack']:checked").val();
     var degree = $("input[name='degree']").val();
     // 上传的图片
     var pic1 = $("#pic1").val();
@@ -191,7 +191,7 @@ function submitSaleForm() {
     formData.area = area;
     formData.phone = telNum;
     formData.post_address_detail = addressDetail;
-    // console.info(formData);
+    console.info(formData);
     if(factoryName.trim() == "") {
         layer.alert("厂家名称不能为空！");
         return false;

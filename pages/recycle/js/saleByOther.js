@@ -157,9 +157,9 @@ function submitSaleForm() {
     var area = $("select[name='area']").val();
     var telNum = $("input[name='telNum']").val();
     var addressDetail = $("input[name='addressDetail']").val();
-    var system = $("input[name='system']").val();
+    var system = $("input[name='system']:checked").val();
     // console.info(system);
-    var hasPack = $("input[name='hasPack']").val();
+    var hasPack = $("input[name='hasPack']:checked").val();
     var degree = $("input[name='degree']").val();
     // 上传的图片
     var pic1 = $("#pic1").val();
@@ -168,7 +168,7 @@ function submitSaleForm() {
     var pic4 = $("#pic4").val();
     var pic5 = $("#pic5").val();
     //处置方式
-    var dealWay = $("input[name='dealWay']").val();
+    var dealWay = $("input[name='dealWay']:checked").val();
     // console.info(pic1);
     var uid = getCookie("uid");
     var token = getCookie("token");
