@@ -111,7 +111,7 @@ function commitRegister() {
     var pswR = $("[name='pswR']").val().trim();
     var pswConR = $("[name='pswConR']").val().trim();
     var registerUrl = commitRegisterUrl();
-    console.info(registerUrl);
+    // console.info(registerUrl);
     if(phoneNumR == "") {
         layer.alert("请输入手机号码！");
         return false;
@@ -131,6 +131,9 @@ function commitRegister() {
         $.ajax({
             url: registerUrl,
             type: "get",
+            xhrFields:{
+                withCredentials:true
+            },
             data: "login_phone=" + phoneNumR + "&verification=" + verificationR + "&password=" + pswR + "&confirm_password=" + pswConR +"&email=" + emailR,
             dataType: "json",
             success: function (data) {
@@ -172,7 +175,7 @@ function commitLogin() {
             data: "login_phone=" + phoneNumLogin + "&password=" + pswLogin,
             dataType: "json",
             success: function (data) {
-                console.info(data);
+                // console.info(data);
                 if (data.api_status==0){
                     setCookie("uid",data.data.uid,7);
                     setCookie("token",data.data.token,7);
@@ -244,11 +247,13 @@ function checkLogin() {
                         $(".photoImg").attr("src",photoSrc);
                     }
                 }else {
-                    console.info(data.api_msg);
+                    // console.info(data.api_msg);
+                    layer.alert(data.api_msg);
                 }
             },
             error: function (e) {
-                console.info("错误，请联系后台管理员！");
+                // console.info("错误，请联系后台管理员！");
+                layer.alert("错误，请联系后台管理员！");
             }
 
         });

@@ -32,14 +32,13 @@ function getCategory() {
         success: function (data) {
             if(data.api_status == 0) {
                 var returnData = data.data;
-                console.info(returnData);
+                // console.info(returnData);
                 for(let item in returnData) {
                     let $opt = "<option value=" + returnData[item].value + ">" + returnData[item].name + "</option>";
                     $("#category").append($opt);
                     //url有参数时进行定位
                     var demandTypeCode = getDemandType();
                     if(demandTypeCode != "" && demandTypeCode != null ) {
-                        console.info(234324324);
                         $("#category").find("option[value='" + demandTypeCode + "']").attr("selected",true);
                     }
                 }
@@ -66,7 +65,7 @@ function getDemandType() {
         return null; // 返回参数值
     }
     code = $.getUrlParam("type");
-    console.info(code);
+    // console.info(code);
     return code;
 }
 
@@ -218,20 +217,20 @@ function submitDemand() {
         //需求详述
         obj.content	 = $("textarea[name='description']").val();
         //请求提交接口
-        console.info(obj);
+        // console.info(obj);
         $.ajax({
             url: submitDemandInfo(),
             type: "get",
             dataType: "json",
             data: obj,
             success: function (data) {
-                console.info(data);
+                // console.info(data);
                 if(data.api_status ==0) {
                     layer.alert("需求发布成功！",{closeBtn: 0},function (index,layero) {
                         window.location.reload();  //页面刷新
                     });
                 }else {
-                    console.info("返回的状态码api_status不是0");
+                    // console.info("返回的状态码api_status不是0");
                     layer.alert(data.body.api_msg);
                 }
             },

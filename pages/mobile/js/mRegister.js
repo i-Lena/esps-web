@@ -79,6 +79,9 @@ function commitMRegister() {
         $.ajax({
             url: registerUrl,
             type: "get",
+            xhrFields:{
+                withCredentials:true
+            },
             data: "login_phone=" + mPhoneNumR + "&verification=" + mVyfR + "&password=" + mPswR + "&confirm_password=" + mPswConR +"&email=" + mEmailR,
             dataType: "json",
             success: function (data) {
