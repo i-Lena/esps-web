@@ -3,6 +3,7 @@ function mSendVefy(obj,second) {
     var mPhoneNumR = $("[name='mPhoneNumR']").val();
     if(mPhoneNumR.trim() == "") {
         layer.alert("请先输入手机号码！");
+        return false;
     }else {
         var sendVyfUrl = sendVerificationUrl();
         // console.info(sendVyfUrl);

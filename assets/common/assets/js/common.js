@@ -55,6 +55,7 @@ function sendVerification(obj,second) {
     var phoneNumR = $("[name='phoneNumR']").val();
     if(phoneNumR == "") {
         layer.alert("请先输入手机号码！");
+        return false;
     }else {
         var sendVyfUrl = sendVerificationUrl();
         console.info(sendVyfUrl);

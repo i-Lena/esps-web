@@ -7,12 +7,16 @@ function editPsw() {
     var confirmPsw = $("input[name='confirmPsw']").val();
     if(oldPsw == "") {
         layer.alert("请输入原密码！");
+        return false;
     }else if(newPsw == "") {
         layer.alert("请输入新密码！");
+        return false;
     }else if(confirmPsw == "") {
         layer.alert("请再次输入新密码！");
+        return false;
     }else if(newPsw != confirmPsw) {
         layer.alert("新密码两次输入不一致！");
+        return false;
     }else {
         $.ajax({
             url: editPswUrl(),

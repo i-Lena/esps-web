@@ -82,12 +82,17 @@ function editUserInfo() {
     var token = getCookie("token");
     var nickName = $("input[name='nickName']").val();
     var email = $("input[name='email']").val();
+    var emailReg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
     if(nickName.trim() == "") {
         layer.alert("昵称不能为空！");
+        return false;
     }else if(email.trim() == "") {
         layer.alert("电子邮箱不能为空！");
-    }
-    $.ajax({
+        return false;
+    }else if(!emailReg.test(email)) {
+        layer.alert("电子邮箱格式不正确！");
+    }else{
+        $.ajax({
         url: editUserInfoUrl(),
         type: "get",
         data: "uid=" + uid + "&token=" + token + "&nickName=" + nickName + "&email=" + email,
@@ -107,4 +112,5 @@ function editUserInfo() {
             layer.alert("系统错误，请联系后台管理员！");
         }
     });
+    }
 }
