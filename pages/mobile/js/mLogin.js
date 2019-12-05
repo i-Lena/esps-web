@@ -12,7 +12,7 @@ function commitMLogin() {
     }else {
         $.ajax({
             url: loginUrl,
-            Type: "post",
+            type: "get",
             data: "login_phone=" + mPhoneNumLogin + "&password=" + mPswLogin,
             dataType: "json",
             success: function (data) {

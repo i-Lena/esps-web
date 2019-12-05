@@ -8,7 +8,7 @@ function mSendVefy(obj,second) {
         console.info(sendVyfUrl);
         $.ajax({
             url: sendVyfUrl,
-            Type: "post",
+            type: "get",
             data: "login_phone=" + mPhoneNumR,
             dataType: "json",
             success: function (data) {
@@ -78,7 +78,7 @@ function commitMRegister() {
     }else {
         $.ajax({
             url: registerUrl,
-            Type: "post",
+            type: "get",
             data: "login_phone=" + mPhoneNumR + "&verification=" + mVyfR + "&password=" + mPswR + "&confirm_password=" + mPswConR +"&email=" + mEmailR,
             dataType: "json",
             success: function (data) {
