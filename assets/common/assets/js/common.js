@@ -61,12 +61,12 @@ function sendVerification(obj,second) {
         $.ajax({
             url: sendVyfUrl,
             type: "get",
-            xhrFields:{
+            /*xhrFields:{
                 withCredentials:true
             },
-            crossDomain: true,
+            crossDomain: true,*/
             data: "login_phone=" + phoneNumR,
-            dataType: "json",
+            dataType: "jsonp",
             success: function (data) {
                 if(data.api_status == 0) {
                     layer.alert("发送成功！");
@@ -135,12 +135,12 @@ function commitRegister() {
         $.ajax({
             url: registerUrl,
             type: "get",
-            xhrFields:{
+            /*xhrFields:{
                 withCredentials:true
             },
-            crossDomain: true,
+            crossDomain: true,*/
             data: "login_phone=" + phoneNumR + "&verification=" + verificationR + "&password=" + pswR + "&confirm_password=" + pswConR +"&email=" + emailR,
-            dataType: "json",
+            dataType: "jsonp",
             success: function (data) {
                 // console.info(data);
                 if(data.api_status==0){

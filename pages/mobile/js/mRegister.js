@@ -5,16 +5,16 @@ function mSendVefy(obj,second) {
         layer.alert("请先输入手机号码！");
     }else {
         var sendVyfUrl = sendVerificationUrl();
-        console.info(sendVyfUrl);
+        // console.info(sendVyfUrl);
         $.ajax({
             url: sendVyfUrl,
             type: "get",
-            xhrFields:{
+            /*xhrFields:{
                 withCredentials:true
             },
-            crossDomain: true,
+            crossDomain: true,*/
             data: "login_phone=" + mPhoneNumR,
-            dataType: "json",
+            dataType: "jsonp",
             success: function (data) {
                 if(data.api_status == 0) {
                     layer.alert("发送成功！");
@@ -83,12 +83,12 @@ function commitMRegister() {
         $.ajax({
             url: registerUrl,
             type: "get",
-            xhrFields:{
+            /*xhrFields:{
                 withCredentials:true
             },
-            crossDomain: true,
+            crossDomain: true,*/
             data: "login_phone=" + mPhoneNumR + "&verification=" + mVyfR + "&password=" + mPswR + "&confirm_password=" + mPswConR +"&email=" + mEmailR,
-            dataType: "json",
+            dataType: "jsonp",
             success: function (data) {
                 // console.info(data);
                 if(data.api_status==0){
