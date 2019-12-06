@@ -38,6 +38,9 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .mainSerItem {
     /*flex: 1;*/
@@ -108,10 +111,15 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .corpItem {
     width: 20%;
     height: 2rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: flex;
     /*justify-content: center;*/
